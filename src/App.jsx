@@ -1,9 +1,13 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import MainLayout from './components/Layout/MainLayout';
 import HomePage from './pages/HomePage';
-import Example1Page from './pages/Example1Page';
-import Example2Page from './pages/Example2Page';
-import Example3Page from './pages/Example3Page';
+import About from './pages/About';
+// Import other pages as needed
+// import OurBusiness from './pages/OurBusiness';
+// import Networks from './pages/Networks';
+// import Enquiries from './pages/Enquiries';
+// import Careers from './pages/Careers';
+// import Contacts from './pages/Contacts';
 
 function App() {
   return (
@@ -11,9 +15,13 @@ function App() {
       <MainLayout>
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/exemple1" element={<Example1Page />} />
-          <Route path="/exemple2" element={<Example2Page />} />
-          <Route path="/exemple3" element={<Example3Page />} />
+          <Route path="/about" element={<About />} />
+          {/* Uncomment and add other pages when ready */}
+          {/* <Route path="/our-business" element={<OurBusiness />} /> */}
+          {/* <Route path="/networks" element={<Networks />} /> */}
+          {/* <Route path="/enquiries" element={<Enquiries />} /> */}
+          {/* <Route path="/careers" element={<Careers />} /> */}
+          {/* <Route path="/contacts" element={<Contacts />} /> */}
         </Routes>
       </MainLayout>
     </Router>

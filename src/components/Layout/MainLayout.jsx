@@ -1,20 +1,25 @@
-import { motion } from 'framer-motion';
-import PropTypes from 'prop-types';
-import Navbar from '../Navigation/Navbar';
-import Footer from '../Navigation/Footer';
+import { motion } from "framer-motion";
+import PropTypes from "prop-types";
+import Navbar from "../Navigation/Navbar";
+import Footer from "../Navigation/Footer";
 
 const MainLayout = ({ children }) => {
   return (
-    <motion.div 
-      className="min-h-screen w-full bg-page-gradient from-primary-900 via-primary-950 to-black text-white"
+    <motion.div
+      className="flex flex-col min-h-screen w-full text-gray-900 dark:text-white bg-white dark:bg-black transition-colors duration-300"
       initial="initial"
       animate="animate"
       exit="exit"
     >
+      {/* Navigation Bar */}
       <Navbar />
-      <main className="max-w-6xl mx-auto px-4 py-32">
+
+      {/* Page Content */}
+      <main className="flex-1 w-full">
         {children}
       </main>
+
+      {/* Footer */}
       <Footer />
     </motion.div>
   );
