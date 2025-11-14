@@ -1,30 +1,37 @@
+import { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { AnimatePresence } from 'framer-motion';
 import MainLayout from './components/Layout/MainLayout';
+import Loader from './components/UI/Loader';
 import HomePage from './pages/HomePage';
 import About from './pages/About';
-// Import other pages as needed
-// import OurBusiness from './pages/OurBusiness';
-// import Networks from './pages/Networks';
-// import Enquiries from './pages/Enquiries';
-// import Careers from './pages/Careers';
-// import Contacts from './pages/Contacts';
+import Contact from './pages/Contact';
 
 function App() {
+  const [loading, setLoading] = useState(true);
+
+  const handleLoadingComplete = () => {
+    setLoading(false);
+  };
+
   return (
-    <Router>
-      <MainLayout>
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/about" element={<About />} />
-          {/* Uncomment and add other pages when ready */}
-          {/* <Route path="/our-business" element={<OurBusiness />} /> */}
-          {/* <Route path="/networks" element={<Networks />} /> */}
-          {/* <Route path="/enquiries" element={<Enquiries />} /> */}
-          {/* <Route path="/careers" element={<Careers />} /> */}
-          {/* <Route path="/contacts" element={<Contacts />} /> */}
-        </Routes>
-      </MainLayout>
-    </Router>
+    <>
+      <AnimatePresence mode="wait">
+        {loading && <Loader onLoadingComplete={handleLoadingComplete} />}
+      </AnimatePresence>
+
+      {!loading && (
+        <Router>
+          <MainLayout>
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/contacts" element={<Contact />} />
+            </Routes>
+          </MainLayout>
+        </Router>
+      )}
+    </>
   );
 }
 

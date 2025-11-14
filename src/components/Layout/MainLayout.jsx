@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import PropTypes from "prop-types";
 import Navbar from "../Navigation/Navbar";
 import Footer from "../Navigation/Footer";
+import ChatButton from "../UI/ChatButton";
 
 const MainLayout = ({ children }) => {
   return (
@@ -21,6 +22,8 @@ const MainLayout = ({ children }) => {
 
       {/* Footer */}
       <Footer />
+
+      <ChatButton />
     </motion.div>
   );
 };

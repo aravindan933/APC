@@ -37,9 +37,9 @@ const NAV_ITEMS = [
   { name: "Home", path: "/" },
   { name: "About Us", path: "/about" },
   { name: "Our Business", dropdown: BUSINESS_ITEMS },
-  { name: "Networks", path: "/networks" },
-  { name: "Enquiries", path: "/enquiries" },
-  { name: "Careers", path: "/careers" },
+  // { name: "Networks", path: "/networks" },
+  // { name: "Enquiries", path: "/enquiries" },
+  // { name: "Careers", path: "/careers" },
   { name: "Contacts", path: "/contacts" },
 ];
 
@@ -71,13 +71,14 @@ const Navbar = () => {
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2">
           <img
-            src="/src/img/AP_Logo.webp"
+            src="/src/assets/logo-color.png"
             alt="Asia Petrochemicals Logo"
             className="h-12 w-auto object-contain"
             onError={(e) => {
               e.target.src = "https://via.placeholder.com/100x40?text=Logo";
             }}
           />
+          <span className="text-1xl font-bold">Asia Petrochemicals LLC</span>
         </Link>
 
         {/* Desktop Menu */}

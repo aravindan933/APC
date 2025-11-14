@@ -33,16 +33,14 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           {/* Company Info */}
           <div className="space-y-5">
-            <div className="flex items-center gap-3">
-              <img
-                src="/src/img/AP Logo.jpeg"
-                alt="Asia Petrochemicals Logo"
-                className="h-27 w-27 object-contain"
-                onError={(e) => {
-                  e.target.src = "https://via.placeholder.com/80x80?text=Logo";
-                }}
-              />
-            </div>
+          <div className="flex flex-col items-center gap-3">
+            <img
+              src="/src/assets/logo-color.png"
+              alt="Asia Petrochemicals Logo"
+              className="h-12 w-auto object-contain"
+            />
+            <span className="text-1xl font-bold">Asia Petrochemicals LLC</span>
+          </div>
             <p className="text-sm leading-relaxed text-gray-400">
               Asia Petrochemicals LLC specializes in the manufacturing and
               distribution of petroleum and chemical-based products worldwide.
@@ -92,7 +90,7 @@ const Footer = () => {
 
           {/* Newsletter */}
           <div>
-            <h3 className="text-lg font-semibold text-white mb-5 border-b border-gray-700 pb-2">
+            {/* <h3 className="text-lg font-semibold text-white mb-5 border-b border-gray-700 pb-2">
               Newsletter
             </h3>
             <form onSubmit={handleSubscribe} className="space-y-3">
@@ -113,7 +111,7 @@ const Footer = () => {
                   ✅ Thank you for subscribing!
                 </p>
               )}
-            </form>
+            </form> */}
           </div>
         </div>
 

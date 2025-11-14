@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import VideoBackground from "../components/UI/VideoBackground";
 
 const HomePage = () => {
   const services = [
@@ -30,9 +31,42 @@ const HomePage = () => {
 
   return (
     <div className="w-full overflow-hidden">
+       <VideoBackground
+        videoSrc="/videos/petrochemical-production.mp4"
+        posterSrc="https://images.unsplash.com/photo-1539185441755-769473a23570"
+        overlay={true}
+        overlayOpacity={0.5}
+      >
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          className="text-center px-6"
+        >
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-4 tracking-tight">
+            Asia Petrochemicals LLC
+          </h1>
+          <p className="text-xl md:text-2xl text-white/90 max-w-2xl mx-auto">
+            Manufacturing, Trading & Distribution of Petrochemicals since 1989
+          </p>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5, duration: 0.8 }}
+            className="mt-8"
+          >
+            <a
+              href="/contacts"
+              className="inline-block px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-full transition-all duration-300 hover:scale-105 shadow-lg"
+            >
+              Get In Touch
+            </a>
+          </motion.div>
+        </motion.div>
+      </VideoBackground>
 
       {/* Hero Section */}
-      <section
+      {/* <section
         className="relative h-screen w-full flex items-center justify-center bg-cover bg-center"
         style={{
           backgroundImage:
@@ -54,7 +88,7 @@ const HomePage = () => {
             </p>
           </motion.div>
         </div>
-      </section>
+      </section> */}
 
       {/* Services Section */}
       <section className="py-24 px-6 w-full">
