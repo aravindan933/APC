@@ -1,13 +1,16 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import MainLayout from './components/Layout/MainLayout';
-import HomePage from './pages/HomePage';
-import About from './pages/About';
-// Import other pages as needed
-// import OurBusiness from './pages/OurBusiness';
-// import Networks from './pages/Networks';
-// import Enquiries from './pages/Enquiries';
-// import Careers from './pages/Careers';
-// import Contacts from './pages/Contacts';
+// src/App.jsx
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import MainLayout from "./components/Layout/MainLayout";
+import HomePage from "./pages/HomePage";
+import About from "./pages/About";
+import AcetatesManufacturing from "./pages/AcetatesManufacturing.jsx";
+import PetroleumDerivatives from "./pages/PetroleumDerivatives.jsx";
+import SolventsChemicals from "./pages/SolventsChemicals.jsx";
+import LubricantsManufacturing from "./pages/LubricantsManufacturing.jsx";
+import PolymersPlastics from "./pages/PolymersPlastics.jsx";
+import WaxesJelliesWhiteOils from "./pages/WaxesJelliesWhiteOils.jsx";
+import Bitumen from "./pages/Bitumen.jsx";
+import Contacts from "./pages/Contacts";
 
 function App() {
   return (
@@ -16,12 +19,14 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<About />} />
-          {/* Uncomment and add other pages when ready */}
-          {/* <Route path="/our-business" element={<OurBusiness />} /> */}
-          {/* <Route path="/networks" element={<Networks />} /> */}
-          {/* <Route path="/enquiries" element={<Enquiries />} /> */}
-          {/* <Route path="/careers" element={<Careers />} /> */}
-          {/* <Route path="/contacts" element={<Contacts />} /> */}
+          <Route path="/acetates-manufacturing" element={<AcetatesManufacturing />} />
+          <Route path="/petroleum-derivatives" element={<PetroleumDerivatives />} />
+          <Route path="/solvents-chemicals" element={<SolventsChemicals />} />
+          <Route path="/lubricants-manufacturing" element={<LubricantsManufacturing />} />
+          <Route path="/polymers-plastics" element={<PolymersPlastics />} />
+          <Route path="/waxes,-jellies-and-white-oils" element={<WaxesJelliesWhiteOils />} />
+          <Route path="/bitumen,-emulsion-cutbacks" element={<Bitumen />} />
+          <Route path="/contacts" element={<Contacts />} />
         </Routes>
       </MainLayout>
     </Router>

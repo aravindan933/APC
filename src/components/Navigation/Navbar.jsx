@@ -7,8 +7,6 @@ import {
   SunIcon,
   HomeIcon,
   BuildingStorefrontIcon,
-  EnvelopeIcon,
-  BriefcaseIcon,
   PhoneIcon,
   UsersIcon,
 } from "@heroicons/react/24/solid";
@@ -27,9 +25,6 @@ const NAV_ICONS = {
   Home: <HomeIcon className="w-5 h-5 mr-2 inline-block" />,
   "About Us": <UsersIcon className="w-5 h-5 mr-2 inline-block" />,
   "Our Business": <BuildingStorefrontIcon className="w-5 h-5 mr-2 inline-block" />,
-  Networks: <UsersIcon className="w-5 h-5 mr-2 inline-block" />,
-  Enquiries: <EnvelopeIcon className="w-5 h-5 mr-2 inline-block" />,
-  Careers: <BriefcaseIcon className="w-5 h-5 mr-2 inline-block" />,
   Contacts: <PhoneIcon className="w-5 h-5 mr-2 inline-block" />,
 };
 
@@ -37,9 +32,6 @@ const NAV_ITEMS = [
   { name: "Home", path: "/" },
   { name: "About Us", path: "/about" },
   { name: "Our Business", dropdown: BUSINESS_ITEMS },
-  { name: "Networks", path: "/networks" },
-  { name: "Enquiries", path: "/enquiries" },
-  { name: "Careers", path: "/careers" },
   { name: "Contacts", path: "/contacts" },
 ];
 
@@ -88,7 +80,9 @@ const Navbar = () => {
                 <button className="flex items-center gap-1 px-4 py-2 hover:bg-blue-500 hover:text-white rounded transition">
                   {item.name} <ChevronDownIcon className="w-4 h-4" />
                 </button>
-                <ul className="absolute top-full left-0 bg-white dark:bg-gray-800 shadow-md mt-1 min-w-[220px] rounded-md overflow-hidden opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-50">
+
+                {/* Dropdown menu appears on hover */}
+                <ul className="absolute top-full left-0 bg-white dark:bg-gray-800 shadow-md mt-1 min-w-[220px] rounded-md overflow-hidden opacity-0 group-hover:opacity-100 group-hover:visible invisible transition-opacity duration-200 z-50">
                   {item.dropdown.map((subItem) => (
                     <li key={subItem}>
                       <Link
@@ -107,6 +101,7 @@ const Navbar = () => {
                   to={item.path}
                   className="flex items-center px-4 py-2 hover:bg-blue-500 hover:text-white rounded transition"
                 >
+                  {NAV_ICONS[item.name]}
                   {item.name}
                 </Link>
               </li>
