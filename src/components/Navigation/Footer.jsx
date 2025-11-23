@@ -31,25 +31,27 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-6 py-14">
         {/* Top Section */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+          
           {/* Company Info */}
-          <div className="space-y-5">
-            <div className="flex items-center gap-3">
-              <img
-                src="/src/img/AP Logo.jpeg"
-                alt="Asia Petrochemicals Logo"
-                className="h-27 w-27 object-contain"
-                onError={(e) => {
-                  e.target.src = "https://via.placeholder.com/80x80?text=Logo";
-                }}
-              />
-            </div>
-            <p className="text-sm leading-relaxed text-gray-400">
-              Asia Petrochemicals LLC specializes in the manufacturing and
-              distribution of petroleum and chemical-based products worldwide.
-              Our commitment is to provide sustainable, high-quality industrial
-              solutions.
-            </p>
-          </div>
+         {/* Company Info with White Background for Logo */}
+<div className="space-y-5">
+  <div className="flex items-center gap-3 bg-white p-2 rounded-lg w-max">
+    <img
+      src="/public/img/AP_Logo.webp"
+      alt="Asia Petrochemicals Logo"
+      className="h-12 w-15 object-contain"
+      onError={(e) => {
+        e.target.src = "https://via.placeholder.com/80x80?text=Logo";
+      }}
+    />
+  </div>
+  <p className="text-sm leading-relaxed text-gray-400">
+    Asia Petrochemicals LLC specializes in the manufacturing and
+    distribution of petroleum and chemical-based products worldwide.
+    Our commitment is to provide sustainable, high-quality industrial
+    solutions.
+  </p>
+</div>
 
           {/* Products & Services */}
           <div>

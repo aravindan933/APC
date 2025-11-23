@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useState } from "react"; 
 import { motion, AnimatePresence } from "framer-motion";
-import { FaComments, FaEnvelope, FaPhone, FaRocket, FaCheckCircle, FaPlus, FaMinus } from "react-icons/fa";
+import { FaComments, FaEnvelope, FaPhone, FaRocket, FaCheckCircle, FaPlus, FaMinus, FaWhatsapp } from "react-icons/fa";
 
 // Simple rotating text component
 const RotatingText = ({ texts, interval = 2000 }) => {
@@ -36,20 +36,40 @@ const Contacts = () => {
     { question: "Where are your manufacturing facilities located?", answer: "Our main Ester Production Facility is in Ras Al Khaimah, UAE, integrated with storage terminals for feedstocks and finished products." },
     { question: "How can I become a distributor or partner?", answer: "We have a wide distribution network across the GCC, Africa, and the Indian Subcontinent. Contact our team for partnership opportunities." },
     { question: "Which industries can benefit from your products?", answer: "Our products are used in pharmaceuticals, automotive lubricants, paints, adhesives, food packaging, cosmetics, plastics, and foam manufacturing." },
-    
   ];
 
+  // Updated contact options with links
   const contactOptions = [
-    { icon: <FaComments size={35} />, title: "Live Chat", text: "Instant real-time support" },
-    { icon: <FaEnvelope size={35} />, title: "Email", text: "We reply within 24 hours" },
-    { icon: <FaPhone size={35} />, title: "Phone", text: "Speak to us directly" },
-    { icon: <FaRocket size={35} />, title: "Technical Support", text: "Quick technical help" },
+    {
+      icon: <FaComments size={35} />,
+      title: "Live Chat",
+      text: "Instant real-time support",
+      link: "https://yourwebsite.com/livechat", // Replace with your live chat URL
+    },
+    {
+      icon: <FaEnvelope size={35} />,
+      title: "Email",
+      text: "We reply within 24 hours",
+      link: "mailto:info@asia-petrochem.com", // Replace with your email
+    },
+    {
+      icon: <FaPhone size={35} />,
+      title: "Phone",
+      text: "Speak to us directly",
+      link: "tel:+971501234567", // Replace with your phone number
+    },
+    {
+      icon: <FaWhatsapp size={35} className="text-green-500" />,
+      title: "WhatsApp",
+      text: "Chat on WhatsApp",
+      link: "https://wa.me/971501234567", // Replace with your WhatsApp number
+    },
   ];
 
   const stores = [
-    { id: 1, name: "Dubai Store", address: "Business Bay, Dubai, UAE", map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115402.123!2d55.112!3d25.2048!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDEyJzE3LjMiTiA1NcKwMDYnMzkuOCJF!5e0!3m2!1sen!2sae!4v1700000000000" },
-    { id: 2, name: "Abu Dhabi Store", address: "Corniche, Abu Dhabi, UAE", map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115782.123!2d54.3773!3d24.4539!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjTCsDI3JzEzLjAiTiA1NMKwMjInNDIuMSJF!5e0!3m2!1sen!2sae!4v1700000000000" },
-    { id: 3, name: "Sharjah Store", address: "Al Majaz, Sharjah, UAE", map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d116200.321!2d55.398!3d25.3463!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDIwJzQ2LjciTiA1NcKwMjMnNTMuNyJF!5e0!3m2!1sen!2sae!4v1700000000000" },
+    {id: 1, name: "Ras Al Khaimah", address: "Al Jazeera Al Hamra - Ras Al Khaimah, UAE", map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3418.4410571073213!2d55.8006328!3d25.6584529!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ef5dd6b3cf6e5e9%3A0x2eeb279f7d587351!2sAsia%20Petrochemicals%20LLC!5e1!3m2!1sen!2sae!4v1763815752503!5m2!1sen!2sae" },
+    { id: 2, name: "Dubai ", address: "Deira - Dubai, UAE", map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3429.507423361706!2d55.3130046!3d25.269585400000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f434abd678efd%3A0x8acdbb1b6d1971f4!2sSuccess%20Spare%20Parts%20L.L.C!5e1!3m2!1sen!2sae!4v1763815868440!5m2!1sen!2sae" },
+    { id: 3, name: "Sharjah ", address: " Hamriya Free Zone - Sharjah, UAE", map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d109558.6988554295!2d55.407483676689715!3d25.474018592390586!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f5722adf5344d%3A0xd108dee3b1ac674!2sASIA%20PETROCHEM%20FZE!5e1!3m2!1sen!2sae!4v1763816145482!5m2!1sen!2sae" },
   ];
 
   return (
@@ -68,7 +88,7 @@ const Contacts = () => {
       <section className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 py-16 px-4">
         {/* Right Image */}
         <motion.div variants={fadeUp} initial="hidden" whileInView="visible" transition={{ duration: 0.6 }}>
-          <img src="/src/img/Contactlogo.webp" alt="Contactlogo" className="w-full rounded-xl shadow-lg" />
+          <img src="/public/img/Contactlogo.jpg" alt="Contactlogo" className="w-full rounded-xl shadow-lg" />
         </motion.div>
 
         {/* Form with Rotating Text */}
@@ -97,11 +117,22 @@ const Contacts = () => {
         <p className="text-center text-gray-600 mb-10">Choose a preferred method below to reach out for assistance or inquiries.</p>
         <div className="grid md:grid-cols-4 gap-8">
           {contactOptions.map((item, i) => (
-            <motion.div key={i} variants={fadeUp} initial="hidden" whileInView="visible" transition={{ delay: i * 0.1 }} whileHover={{ scale: 1.08 }} className="bg-white p-6 rounded-xl shadow-lg text-center hover:shadow-2xl transition cursor-pointer">
+            <motion.a
+              key={i}
+              href={item.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              variants={fadeUp}
+              initial="hidden"
+              whileInView="visible"
+              transition={{ delay: i * 0.1 }}
+              whileHover={{ scale: 1.08 }}
+              className="bg-white p-6 rounded-xl shadow-lg text-center hover:shadow-2xl transition cursor-pointer flex flex-col items-center"
+            >
               <div className="text-blue-600 mb-3 animate-bounce">{item.icon}</div>
               <h3 className="font-bold text-lg">{item.title}</h3>
               <p className="text-gray-600">{item.text}</p>
-            </motion.div>
+            </motion.a>
           ))}
         </div>
       </section>
@@ -148,7 +179,7 @@ const Contacts = () => {
             ))}
           </div>
           <div className="flex justify-center">
-            <img src="/src/img/FAQ.gif" alt="Petrochemicals" className="w-full rounded-xl shadow-lg" />
+            <img src="/img/FAQ.gif" alt="Petrochemicals" className="w-full rounded-xl shadow-lg" />
           </div>
         </div>
       </section>

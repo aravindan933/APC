@@ -11,10 +11,11 @@ import PolymersPlastics from "./pages/PolymersPlastics.jsx";
 import WaxesJelliesWhiteOils from "./pages/WaxesJelliesWhiteOils.jsx";
 import Bitumen from "./pages/Bitumen.jsx";
 import Contacts from "./pages/Contacts";
-
+import PageWrapper from "./components/PageWrapper/PageWrapper.jsx";
 function App() {
   return (
     <Router>
+      <PageWrapper>
       <MainLayout>
         <Routes>
           <Route path="/" element={<HomePage />} />
@@ -29,6 +30,7 @@ function App() {
           <Route path="/contacts" element={<Contacts />} />
         </Routes>
       </MainLayout>
+      </PageWrapper>
     </Router>
   );
 }

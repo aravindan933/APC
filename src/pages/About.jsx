@@ -99,7 +99,7 @@ const AboutUs = () => {
           transition={{ duration: 0.8 }}
         >
           <img
-            src="/src/img/Aboutus.webp"
+            src="/public/img/about.jpg"
             alt="Petrochemical Facility"
             className="w-full object-cover rounded-2xl shadow-lg"
           />
@@ -130,7 +130,7 @@ const AboutUs = () => {
           transition={{ duration: 0.8 }}
         >
           <img
-            src="/src/img/AboutFacility.jpg"
+            src="/public/img/about2.png"
             alt="Ester Production Facility"
             className="w-full h-full object-cover rounded-2xl shadow-lg"
           />
@@ -169,7 +169,7 @@ const AboutUs = () => {
           transition={{ duration: 0.8 }}
         >
           <video
-            src="/src/video/hero.mp4"
+            src="video/heroe.mp4"
             controls
             className="w-full rounded-2xl shadow-lg"
           />

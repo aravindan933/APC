@@ -3,92 +3,64 @@ import { motion } from "framer-motion";
 import Typewriter from "typewriter-effect";
 
 const LubricantsManufacturing = () => {
-  const lubricants = [
-    {
-      title: "Engine Oils",
-      desc: "Diesel & Petrol engine oils available in Monograde, Multigrade, Semi-Synthetic & Fully Synthetic formulations.",
-      img: "/src/img/engine-oil.webp",
-    },
-    {
-      title: "Gear Oils",
-      desc: "High-performance gear oils in API GL4/GL5 grades for automotive and industrial applications.",
-      img: "/src/img/gear-oil.webp",
-    },
-    {
-      title: "Hydraulic Oils",
-      desc: "Industrial and hydraulic fluids designed for heavy-duty machinery and equipment.",
-      img: "/src/img/hydraulic-oil.webp",
-    },
-    {
-      title: "Brake Fluids",
-      desc: "Brake fluids meeting DOT 3 and DOT 4 specifications for optimal braking performance.",
-      img: "/src/img/brake-fluid.webp",
-    },
-    {
-      title: "Greases",
-      desc: "Premium automotive and industrial greases with excellent heat and pressure resistance.",
-      img: "/src/img/grease.webp",
-    },
-    {
-      title: "Coolants & Antifreeze",
-      desc: "High-grade coolants and antifreeze solutions for engine protection in all climates.",
-      img: "/src/img/coolant.webp",
-    },
-    {
-      title: "Transmission Fluids",
-      desc: "Top-tier transmission & clutch fluids for smooth performance and durability.",
-      img: "/src/img/transmission-fluid.webp",
-    },
-    {
-      title: "Additives & Components",
-      desc: "ZDDP, PPD, VI Improvers, TBN boosters, dyes & fragrances used in lubricant blending.",
-      img: "/src/img/additives.webp",
-    }
+  const benefits = [
+    "API Certified Lubricants",
+    "High Performance Additive Packages",
+    "Engineered for Extreme Conditions",
+    "Reliable Global Distribution",
+    "Long Engine & Equipment Life",
+    "Advanced Blending Technology",
   ];
 
   return (
     <div className="w-full text-gray-800 dark:text-gray-200 font-sans">
 
       {/* HERO SECTION */}
-      <section className="relative w-full h-96 bg-blue-700 flex items-center justify-center text-center">
-        <div className="text-white max-w-2xl px-4">
-          <h1 className="text-4xl md:text-5xl font-extrabold mb-4 drop-shadow-lg">
-            Lubricants Manufacturing
-          </h1>
-
-          <p className="text-lg md:text-xl mb-4 drop-shadow-sm">
-            <Typewriter
-              options={{
-                strings: [
-                  "Automotive & Industrial Lubricants",
-                  "Greases, Coolants & Brake Fluids",
-                  "Reliable Global Lubricant Supply"
-                ],
-                autoStart: true,
-                loop: true,
-                delay: 50,
-                deleteSpeed: 30,
-              }}
-            />
-          </p>
+      <section className="relative w-full h-96">
+        <img
+          src="/public/img/lubricants-banner.webp"
+          alt="Lubricants Banner"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-black/20 flex items-center justify-center text-center px-4">
+          <div className="text-white max-w-2xl">
+            <h1 className="text-4xl md:text-5xl font-extrabold mb-4 drop-shadow-lg">
+              Lubricants Manufacturing
+            </h1>
+            <p className="text-lg md:text-xl mb-4 drop-shadow-sm">
+              <Typewriter
+                options={{
+                  strings: [
+                    "Automotive & Industrial Lubes",
+                    "Greases, Coolants & Brake Fluids",
+                    "Components, Additives, Dyes & Fragrances",
+                  ],
+                  autoStart: true,
+                  loop: true,
+                  delay: 50,
+                  deleteSpeed: 30,
+                }}
+              />
+            </p>
+          </div>
         </div>
       </section>
 
       {/* ABOUT SECTION */}
       <section className="py-16 px-6 md:px-12 bg-gray-50 dark:bg-gray-900">
-        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-stretch gap-8">
-
+        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-stretch gap-12">
+          
           {/* IMAGE */}
           <div className="flex-1 flex justify-center">
             <img
-              src="/src/img/lubricants-banner.webp"
-              alt="Lubricants Manufacturing"
+              src="/public/img/lubricants.webp"
+              alt="Synol Lubricants"
               className="w-[400px] h-[400px] object-cover rounded-3xl shadow-2xl border-4 border-blue-100 dark:border-blue-700 transition-transform duration-500 hover:scale-105"
             />
           </div>
 
-          {/* CONTENT */}
-          <div className="flex-1 flex flex-col justify-center gap-4">
+          {/* ABOUT CONTENT */}
+          <div className="flex-1 flex flex-col gap-4">
             <motion.h2
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -102,20 +74,15 @@ const LubricantsManufacturing = () => {
             </motion.h2>
 
             <p className="text-[#1e3a8a] text-base md:text-lg leading-relaxed text-justify">
-              SYNOL LUBES is the flagship brand of Asia Petrochem’s Automotive,
-              Industrial Lubricants, Greases, Brake Fluids, and Coolants. Our
-              products meet global API performance levels and are blended using
-              advanced formulations and premium additives.
+              SYNOL LUBES is the flagship brand of Asia Petrochem, providing a wide range of Automotive and Industrial Lubes, Greases, Brake Fluids, and Coolants. Our products are blended, packed, and distributed through a network of diligent partners across key countries.
             </p>
 
             <p className="text-[#1e3a8a] text-base md:text-lg leading-relaxed text-justify">
-              With a strong distribution network across key global markets, our
-              lubricants are trusted for reliability, durability, and superior
-              engine protection across industries.
+              Our products meet all API Level Grades with key certificates and approvals from various inspection bodies. Apart from lubricant blending, we also distribute various components, VI polymers, additives, dyes, and fragrances used in blending applications.
             </p>
 
-            {/* SINGLE BROCHURE DOWNLOAD BUTTON */}
-            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="mt-3">
+            {/* BROCHURE BUTTON */}
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="mt-6">
               <a
                 href="/src/pdf/lubricants-brochure.pdf"
                 download
@@ -128,34 +95,45 @@ const LubricantsManufacturing = () => {
         </div>
       </section>
 
-      {/* PRODUCT GRID */}
+      {/* PRODUCT RANGE & ADDITIVES SECTION */}
       <section className="py-16 px-6 md:px-12 bg-white dark:bg-gray-800">
-        <div className="max-w-6xl mx-auto text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-normal mb-4">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-normal text-center mb-12">
             <span className="text-[#1e3a8a]">Our</span>{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-blue-500">
-              Lubricant Products
+              Product Range & Additives
             </span>
           </h2>
-        </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-          {lubricants.map((item, i) => (
-            <div key={i} className="bg-gray-50 dark:bg-gray-900 p-6 rounded-2xl shadow-md flex flex-col items-center text-center">
-
-              <img
-                src={item.img}
-                alt={item.title}
-                className="w-[400px] h-[400px] object-cover rounded-xl mb-4"
-              />
-
-              <h3 className="text-xl font-semibold mb-2 text-[#1e3a8a]">
-                {item.title}
-              </h3>
-
-              <p className="text-[#1e3a8a] mb-4">{item.desc}</p>
+          <div className="flex flex-col md:flex-row gap-6">
+            {/* PRODUCT RANGE BOX */}
+            <div className="flex-1 bg-white dark:bg-gray-900 p-8 rounded-3xl shadow-lg border border-gray-200 dark:border-gray-700">
+              <h3 className="text-2xl font-semibold text-[#1e3a8a] mb-6">Product Range</h3>
+              <ul className="list-disc list-inside text-[#1e3a8a] text-base md:text-lg leading-relaxed space-y-2">
+                <li>Diesel & Petrol Engine Oils (Monograde, Multigrade, Semi-Synthetic & Fully Synthetic)</li>
+                <li>Transmission & Clutch Fluids</li>
+                <li>Gear Oils in API GL4/GL5 Grades (Monograde & Multigrade)</li>
+                <li>Hydraulic & Industrial Oils</li>
+                <li>Antifreeze & Coolants</li>
+                <li>Automotive Greases</li>
+                <li>Brake Fluids in API DOT 3 & DOT 4</li>
+              </ul>
             </div>
-          ))}
+
+            {/* ADDITIVES & COMPONENTS BOX */}
+            <div className="flex-1 bg-white dark:bg-gray-900 p-8 rounded-3xl shadow-lg border border-gray-200 dark:border-gray-700">
+              <h3 className="text-2xl font-semibold text-[#1e3a8a] mb-6">Additives & Components</h3>
+              <ul className="list-disc list-inside text-[#1e3a8a] text-base md:text-lg leading-relaxed space-y-2">
+                <li>TBN Boosters 400</li>
+                <li>Pour Point Depressants</li>
+                <li>ZDDP (Primary & Secondary)</li>
+                <li>Engine Oil Packages</li>
+                <li>Transmission Oil Packages</li>
+                <li>VI Improvers in EPM/EPDM/OCP Grades</li>
+                <li>Dyes & Fragrances</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -171,15 +149,8 @@ const LubricantsManufacturing = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto text-center">
-          {[
-            "API Certified Lubricants",
-            "High Performance Additive Packages",
-            "Engineered for Extreme Conditions",
-            "Reliable Global Distribution",
-            "Long Engine & Equipment Life",
-            "Advanced Blending Technology",
-          ].map((benefit, index) => (
-            <div key={index} className="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-md">
+          {benefits.map((benefit, idx) => (
+            <div key={idx} className="bg-white dark:bg-gray-800 p-6 rounded-3xl shadow-md transition-transform hover:scale-105">
               <p className="text-[#1e3a8a] font-semibold">{benefit}</p>
             </div>
           ))}

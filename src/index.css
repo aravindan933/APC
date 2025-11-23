@@ -1,3 +1,86 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Loader container: full screen, centered */
+.loader-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: #fff;
+  z-index: 9999;
+}
+
+/* Loader cube/grid */.loader {
+  width: 64px;
+  aspect-ratio: 1;
+  background: 
+    radial-gradient(farthest-side at bottom right, #46ad06 100%, #0000),
+    radial-gradient(farthest-side at bottom left , #46ad06 90%, #0000),
+    radial-gradient(farthest-side at top    right, #46ad06 90%, #0000),
+    radial-gradient(farthest-side at top    left , #46ad06 90%, #0000),
+    radial-gradient(farthest-side at bottom right, #f40000 90%, #0000),
+    radial-gradient(farthest-side at bottom left , #f40000 90%, #0000),
+    radial-gradient(farthest-side at top    right, #f40000 90%, #0000),
+    radial-gradient(farthest-side at top    left , #f40000 90%, #0000),
+    radial-gradient(farthest-side at bottom right, #063fc3 90%, #0000),
+    radial-gradient(farthest-side at bottom left , #063fc3 90%, #0000),
+    radial-gradient(farthest-side at top    right, #063fc3 90%, #0000),
+    radial-gradient(farthest-side at top    left , #063fc3 90%, #0000);
+  background-size: 25% 25%;
+  background-repeat: no-repeat;
+  animation: l16 2s infinite;
+}
+
+
+@keyframes l16{
+  0%, 100% { background-position: 
+    calc(1*100%/3) calc(1*100%/3), calc(2*100%/3) calc(1*100%/3),
+    calc(1*100%/3) calc(2*100%/3), calc(2*100%/3) calc(2*100%/3),
+    calc(1*100%/3) calc(1*100%/3), calc(2*100%/3) calc(1*100%/3),
+    calc(1*100%/3) calc(2*100%/3), calc(2*100%/3) calc(2*100%/3),
+    calc(1*100%/3) calc(1*100%/3), calc(2*100%/3) calc(1*100%/3),
+    calc(1*100%/3) calc(2*100%/3), calc(2*100%/3) calc(2*100%/3);
+  }
+  16.67%, 33.33%, 50%, 66.67%, 83.33% { /* add intermediate frames if needed */
+    /* repeat positions or customize as per your animation */
+  }
+}
+
+@keyframes l16{
+  0% {background-position: 
+        calc(1*100%/3) calc(1*100%/3), calc(2*100%/3) calc(1*100%/3), calc(1*100%/3) calc(2*100%/3), calc(2*100%/3) calc(2*100%/3),
+        calc(1*100%/3) calc(1*100%/3), calc(2*100%/3) calc(1*100%/3), calc(1*100%/3) calc(2*100%/3), calc(2*100%/3) calc(2*100%/3),
+        calc(1*100%/3) calc(1*100%/3), calc(2*100%/3) calc(1*100%/3), calc(1*100%/3) calc(2*100%/3), calc(2*100%/3) calc(2*100%/3);}
+  16.67% {background-position: 
+        calc(0*100%/3) calc(0*100%/3), calc(3*100%/3) calc(0*100%/3), calc(0*100%/3) calc(3*100%/3), calc(3*100%/3) calc(3*100%/3),
+        calc(1*100%/3) calc(1*100%/3), calc(2*100%/3) calc(1*100%/3), calc(1*100%/3) calc(2*100%/3), calc(2*100%/3) calc(2*100%/3),
+        calc(1*100%/3) calc(1*100%/3), calc(2*100%/3) calc(1*100%/3), calc(1*100%/3) calc(2*100%/3), calc(2*100%/3) calc(2*100%/3);}
+  33.33% {background-position: 
+        calc(0*100%/3) calc(0*100%/3), calc(3*100%/3) calc(0*100%/3), calc(0*100%/3) calc(3*100%/3), calc(3*100%/3) calc(3*100%/3),
+        calc(0*100%/3) calc(0*100%/3), calc(3*100%/3) calc(0*100%/3), calc(0*100%/3) calc(3*100%/3), calc(3*100%/3) calc(3*100%/3),
+        calc(1*100%/3) calc(1*100%/3), calc(2*100%/3) calc(1*100%/3), calc(1*100%/3) calc(2*100%/3), calc(2*100%/3) calc(2*100%/3);}
+  50% {background-position: 
+        calc(0*100%/3) calc(0*100%/3), calc(3*100%/3) calc(0*100%/3), calc(0*100%/3) calc(3*100%/3), calc(3*100%/3) calc(3*100%/3),
+        calc(0*100%/3) calc(0*100%/3), calc(3*100%/3) calc(0*100%/3), calc(0*100%/3) calc(3*100%/3), calc(3*100%/3) calc(3*100%/3),
+        calc(0*100%/3) calc(0*100%/3), calc(3*100%/3) calc(0*100%/3), calc(0*100%/3) calc(3*100%/3), calc(3*100%/3) calc(3*100%/3);}
+  66.67% {background-position: 
+        calc(1*100%/3) calc(1*100%/3), calc(2*100%/3) calc(1*100%/3), calc(1*100%/3) calc(2*100%/3), calc(2*100%/3) calc(2*100%/3),
+        calc(0*100%/3) calc(0*100%/3), calc(3*100%/3) calc(0*100%/3), calc(0*100%/3) calc(3*100%/3), calc(3*100%/3) calc(3*100%/3),
+        calc(0*100%/3) calc(0*100%/3), calc(3*100%/3) calc(0*100%/3), calc(0*100%/3) calc(3*100%/3), calc(3*100%/3) calc(3*100%/3);}
+  83.33% {background-position: 
+        calc(1*100%/3) calc(1*100%/3), calc(2*100%/3) calc(1*100%/3), calc(1*100%/3) calc(2*100%/3), calc(2*100%/3) calc(2*100%/3),
+        calc(1*100%/3) calc(1*100%/3), calc(2*100%/3) calc(1*100%/3), calc(1*100%/3) calc(2*100%/3), calc(2*100%/3) calc(2*100%/3),
+        calc(0*100%/3) calc(0*100%/3), calc(3*100%/3) calc(0*100%/3), calc(0*100%/3) calc(3*100%/3), calc(3*100%/3) calc(3*100%/3);}
+  100% {background-position: 
+        calc(1*100%/3) calc(1*100%/3), calc(2*100%/3) calc(1*100%/3), calc(1*100%/3) calc(2*100%/3), calc(2*100%/3) calc(2*100%/3),
+        calc(1*100%/3) calc(1*100%/3), calc(2*100%/3) calc(1*100%/3), calc(1*100%/3) calc(2*100%/3), calc(2*100%/3) calc(2*100%/3),
+        calc(1*100%/3) calc(1*100%/3), calc(2*100%/3) calc(1*100%/3), calc(1*100%/3) calc(2*100%/3), calc(2*100%/3) calc(2*100%/3);}
+}

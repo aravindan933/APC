@@ -6,6 +6,11 @@ export default {
   ],
   theme: {
     extend: {
+      // ✅ Add Open Sans font for ALL pages
+      fontFamily: {
+        sans: ["Open Sans", "sans-serif"],
+      },
+
       colors: {
         primary: {
           50: '#eef2ff',
@@ -47,29 +52,32 @@ export default {
           950: '#020617',
         }
       },
+
       backgroundImage: {
-        'primary-gradient': 'linear-gradient(to right, var(--tw-gradient-stops))',
-        'primary-gradient-stops': 'from-primary-500 to-secondary-500',
-        'primary-gradient-hover': 'from-primary-600 to-secondary-600',
-        'text-gradient': 'from-white to-accent-300',
-        'page-gradient': 'radial-gradient(ellipse at top, var(--tw-gradient-stops))',
+        "primary-gradient": "linear-gradient(to right, var(--tw-gradient-stops))",
+        "primary-gradient-stops": "from-primary-500 to-secondary-500",
+        "primary-gradient-hover": "from-primary-600 to-secondary-600",
+        "text-gradient": "from-white to-accent-300",
+        "page-gradient": "radial-gradient(ellipse at top, var(--tw-gradient-stops))",
       },
+
       animation: {
-        'float': 'float 6s ease-in-out infinite',
-        'gradient': 'gradient 8s linear infinite',
+        float: "float 6s ease-in-out infinite",
+        gradient: "gradient 8s linear infinite",
       },
+
       keyframes: {
         float: {
-          '0%, 100%': { transform: 'translateY(0)' },
-          '50%': { transform: 'translateY(-20px)' },
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-20px)" },
         },
         gradient: {
-          '0%': { backgroundPosition: '0% 50%' },
-          '50%': { backgroundPosition: '100% 50%' },
-          '100%': { backgroundPosition: '0% 50%' },
+          "0%": { backgroundPosition: "0% 50%" },
+          "50%": { backgroundPosition: "100% 50%" },
+          "100%": { backgroundPosition: "0% 50%" },
         },
       },
     },
   },
   plugins: [],
-}
+};
