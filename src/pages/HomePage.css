@@ -1,0 +1,85 @@
+/* Base container for the whole screen */
+.container {
+  height: 100vh; /* Full viewport height */
+  overflow-y: auto; /* IMPORTANT: Enables vertical scrolling */
+  background-color: #121212; /* Dark background for dramatic effect */
+  position: relative; 
+}
+
+/* The fixed light bar element */
+.light-bar {
+  position: sticky; /* Keeps the light bar fixed at the top of the container while scrolling */
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 40px; 
+  width: 100%;
+  
+  /* Initial default style (overridden by inline style for the animation) */
+  background-color: white; 
+  
+  /* Adds a smooth transition to the shadow and opacity change */
+  transition: box-shadow 0.05s ease-out, opacity 0.05s ease-out; 
+  z-index: 10;
+}
+
+/* Scrollable content section */
+.content {
+  /* Padding at the top to prevent the content from being hidden behind the sticky light bar */
+  padding: 80px 20px 20px; 
+  color: #a0a0a0;
+  min-height: 200vh; /* Ensures content is tall enough to scroll */
+}
+
+.text-header {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 40px;
+}
+/* Base container for the whole screen */
+.container {
+  height: 100vh; /* Full viewport height */
+  overflow-y: auto; /* IMPORTANT: Enables vertical scrolling */
+  background-color: #121212; /* Dark background for dramatic effect */
+  position: relative; 
+}
+
+/* The fixed light bar element */
+.light-bar {
+  position: sticky; /* Keeps the light bar fixed at the top of the container while scrolling */
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 40px; 
+  width: 100%;
+  
+  /* Initial default style (overridden by inline style for the animation) */
+  background-color: white; 
+  
+  /* Adds a smooth transition to the shadow and opacity change */
+  transition: box-shadow 0.05s ease-out, opacity 0.05s ease-out; 
+  z-index: 10;
+}
+
+/* Scrollable content section */
+.content {
+  /* Padding at the top to prevent the content from being hidden behind the sticky light bar */
+  padding: 80px 20px 20px; 
+  color: #a0a0a0;
+  min-height: 200vh; /* Ensures content is tall enough to scroll */
+}
+
+.text-header {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.content-item {
+  padding: 10px 0;
+  border-bottom: 1px solid #333;
+}
+.content-item {
+  padding: 10px 0;
+  border-bottom: 1px solid #333;
+}

@@ -13,12 +13,57 @@
   <meta name="description" content="Asia Petrochem supplies premium petroleum derivatives, base oils, lubricants, fuel oils, waxes, urea, and industrial chemicals with global distribution and reliable logistics.">
   <meta name="keywords" content="Asia Petrochem, petroleum, base oils, lubricants, chemical supplier, fuel oil, SN 150, SN 500, recycled base oil, waxes, sulphur, urea fertilizers">
 
-  <!-- Open Sans Font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- TailwindCSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
 
-   
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    body, html {
+      font-family: 'Arimo', sans-serif;
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+    }
+
+    /* Loader styles */
+    #preloader {
+      position: fixed;
+      width: 100vw;
+      height: 100vh;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 50;
+    }
+    .loader {
+      width: 50px;
+      height: 50px;
+      border: 5px solid #6366f1;
+      border-top-color: #f3e8ff;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    /* Scroll animation classes */
+    .scroll-fade, .scroll-up, .scroll-left, .scroll-zoom {
+      opacity: 0;
+      transition: all 0.8s ease-out;
+    }
+    .scroll-fade.visible { opacity: 1; transform: translateY(0); }
+    .scroll-up { transform: translateY(40px); }
+    .scroll-up.visible { opacity: 1; transform: translateY(0); }
+    .scroll-left { transform: translateX(40px); }
+    .scroll-left.visible { opacity: 1; transform: translateX(0); }
+    .scroll-zoom { transform: scale(0.9); }
+    .scroll-zoom.visible { opacity: 1; transform: scale(1); }
+  </style>
 </head>
 
 <body>
@@ -27,11 +72,38 @@
     <div class="loader"></div>
   </div>
 
-  <div id="root"></div>
+  <!-- Root content -->
+  <div id="root">
+    <!-- Parallax Hero Section -->
+    <header class="relative h-screen overflow-hidden">
+      <!-- Back layer -->
+      <div id="back-layer" class="absolute inset-0 bg-cover bg-center" style="background-image: url('/images/layer-back.jpg');"></div>
 
+      <!-- Middle layer -->
+      <div id="mid-layer" class="absolute inset-0 bg-cover bg-center opacity-80" style="background-image: url('/images/layer-middle.png');"></div>
+
+      <!-- Overlay -->
+      <div class="absolute inset-0 bg-black/40"></div>
+
+      <!-- Content -->
+      <div class="relative z-10 flex flex-col items-center justify-center h-full text-center px-4">
+        <h1 class="text-6xl md:text-7xl font-bold text-white scroll-up">Experience True Depth</h1>
+        <p class="text-xl md:text-2xl text-accent-100 mt-6 scroll-fade">Smooth parallax. Modern animations. Pure TailwindCSS.</p>
+        <button class="mt-10 px-8 py-4 bg-primary-600 hover:bg-primary-700 text-white text-lg rounded-xl shadow-xl scroll-zoom">Get Started</button>
+      </div>
+    </header>
+
+    <!-- Example section -->
+    <section class="h-screen flex items-center justify-center">
+      <h2 class="text-4xl font-bold text-primary-700 scroll-up">Welcome to the Next Section</h2>
+    </section>
+  </div>
+
+  <!-- React Mount Point -->
   <script type="module" src="/src/main.jsx"></script>
+
   <script>
-    // Show loader for exactly 3 seconds before React mounts
+    // Loader fade-out
     window.addEventListener("load", () => {
       const preloader = document.getElementById("preloader");
       if (preloader) {
@@ -42,6 +114,26 @@
         }, 3000);
       }
     });
+
+    // Parallax scrolling
+    const backLayer = document.getElementById("back-layer");
+    const midLayer = document.getElementById("mid-layer");
+    window.addEventListener("scroll", () => {
+      const y = window.scrollY;
+      if(backLayer) backLayer.style.transform = `translateY(${y * 0.15}px)`;
+      if(midLayer) midLayer.style.transform = `translateY(${y * 0.3}px)`;
+    });
+
+    // Scroll reveal animations
+    const scrollElements = document.querySelectorAll(".scroll-fade, .scroll-up, .scroll-left, .scroll-zoom");
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.classList.add("visible");
+        }
+      });
+    }, { threshold: 0.2 });
+    scrollElements.forEach(el => observer.observe(el));
   </script>
 </body>
 </html>
