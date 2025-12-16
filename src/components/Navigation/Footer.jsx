@@ -66,6 +66,8 @@ const Footer = () => {
               <li className="hover:text-white transition-colors">Polymers & Plastics</li>
               <li className="hover:text-white transition-colors">Bitumen, Emulsion & Cutbacks</li>
               <li className="hover:text-white transition-colors">Waxes, Jellies & White Oils</li>
+              <li className="hover:text-white transition-colors">Plasticizers</li>
+              <li className="hover:text-white transition-colors">Chemical Storage Terminal</li>
             </ul>
           </div>
 

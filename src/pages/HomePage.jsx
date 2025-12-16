@@ -5,12 +5,16 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Typewriter from "typewriter-effect";
+import { Link } from "react-router-dom";
 import WhatsAppButton from "../components/WhatsAppButton/WhatsAppButton";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination } from "swiper/modules";
+import { Autoplay, Pagination, EffectFade, Navigation } from "swiper/modules";
 import LightRays from "../components/LightRays/LightRays";
 import "swiper/css";
 import "swiper/css/pagination";
+import "swiper/css/effect-fade";
+import "swiper/css/navigation";
+import "./HomePage.css";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -25,18 +29,38 @@ const aboutContent = {
   ],
 };
 
-// Hero Slider Slides
-const heroSlides = [
-  {
-    title: "Manufacturing Petrochemicals",
-    subtitle: "High-quality solutions for industries worldwide",
-    images: ["/img/homeabout.webp", "/img/homeabout2.webp"],
-  },
-  {
-    title: "Trading Petrochemicals Across the GCC",
-    subtitle: "Reliable supply chain & global distribution",
-    images: ["/img/homeabout2.webp", "/img/homeabout3.webp"],
-  },
+// Hero Images - Industrial facility images
+// NOTE: Please add these images to public/img/ folder:
+// - hero-industrial-1.jpg (worm gear lubrication)
+// - hero-industrial-2.jpg (storage tanks with "DISTILLAT" labels)
+// - hero-industrial-3.jpg (facility overview with "ap" logo building)
+// - hero-industrial-4.jpg (blue valves and piping)
+// - hero-industrial-5.jpg (facility with yellow staircase)
+// - hero-industrial-6.jpg (piping close-up)
+// Using fallback images until new ones are added
+const heroImages = [
+  "/img/hero-industrial-1.jpg", // Worm gear lubrication
+  "/img/hero-industrial-2.jpg", // Storage tanks
+  "/img/hero-industrial-3.jpg", // Facility overview
+  "/img/hero-industrial-4.jpg", // Piping and valves
+  "/img/hero-industrial-5.jpg", // Facility building
+  "/img/hero-industrial-6.jpg", // Piping close-up
+  // Fallback images if above don't exist
+  "/img/hero-industry-7.jpg",
+  "/img/homeabout.webp",
+];
+
+// Group Verticals Data
+const groupVerticals = [
+  { name: "Acetates Manufacturing", color: "bg-red-500", path: "/acetates-manufacturing" },
+  { name: "Petroleum & Derivatives", color: "bg-purple-500", path: "/petroleum-derivatives" },
+  { name: "Solvents & Chemicals", color: "bg-green-500", path: "/solvents-chemicals" },
+  { name: "Lubricants Manufacturing", color: "bg-yellow-500", path: "/lubricants-manufacturing" },
+  { name: "Polymers & Plastics", color: "bg-cyan-500", path: "/polymers-plastics" },
+  { name: "Bitumen, Emulsion & Cutbacks", color: "bg-violet-500", path: "/bitumen,-emulsion-cutbacks" },
+  { name: "Waxes, Jellies and White Oils", color: "bg-orange-500", path: "/waxes,-jellies-and-white-oils" },
+  { name: "Plasticizers", color: "bg-pink-500", path: "/plasticizers" },
+  { name: "Chemical Storage Terminal", color: "bg-teal-500", path: "/chemical-storage-terminal" },
 ];
 
 // Products, Services, News
@@ -201,75 +225,138 @@ export default function HomePage() {
 
   return (
     <div className="relative font-sans text-slate-900">
-      {/* HERO SLIDER WITH LIGHT RAYS */}
-      <section className="relative w-full h-[700px] flex items-center justify-center bg-white overflow-hidden">
-        <LightRays
-          raysOrigin="top-center"
-          raysColor="#FF0F0FFF"
-          raysSpeed={1.2}
-          lightSpread={1}
-          rayLength={2}
-          pulsating={true}
-        />
-        <Swiper
-          modules={[Autoplay, Pagination]}
-          slidesPerView={1}
-          loop
-          autoplay={{ delay: 6000, disableOnInteraction: false }}
-          pagination={{ clickable: true }}
-          onSlideChange={(swiper) => setActiveHeroIndex(swiper.realIndex)}
-          className="h-full w-full relative z-10"
-        >
-          {heroSlides.map((slide, slideIndex) => (
-            <SwiperSlide key={slideIndex}>
-              <div className="max-w-7xl mx-auto px-6 md:px-20 h-full flex flex-col md:flex-row items-center justify-center gap-15">
-                <div className="flex-1 text-left z-20">
-                  <h1 className="text-3xl md:text-5xl font-extrabold mb-4">
-                    {slide.title}
-                  </h1>
-                  <div className="mb-6 text-lg md:text-xl text-slate-100">
-                    <Typewriter
-                      options={{
-                        strings: [slide.subtitle],
-                        autoStart: true,
-                        loop: true,
-                        delay: 60,
-                        deleteSpeed: 40,
-                      }}
-                    />
-                  </div>
-                  <a
-                    href="#products"
-                    className="inline-block px-6 py-3 bg-sky-600 text-white font-medium rounded-lg shadow hover:bg-sky-700 transition"
+      {/* MODERN HERO SECTION WITH IMAGE SLIDESHOW */}
+      <section className="relative w-full min-h-[90vh] flex items-center justify-center overflow-hidden">
+        {/* Image Slideshow - Full Screen */}
+        <div className="absolute inset-0 z-0 hero-slideshow">
+          <Swiper
+            modules={[Autoplay, EffectFade, Pagination, Navigation]}
+            slidesPerView={1}
+            loop
+            autoplay={{ 
+              delay: 5000, 
+              disableOnInteraction: false,
+              pauseOnMouseEnter: true 
+            }}
+            effect="fade"
+            fadeEffect={{ crossFade: true }}
+            pagination={{
+              clickable: true,
+            }}
+            navigation={true}
+            className="h-full w-full"
+            speed={1000}
+          >
+            {heroImages.map((img, idx) => (
+              <SwiperSlide key={idx}>
+                <div className="relative w-full h-full">
+                  {/* Image with overlay */}
+                  <div 
+                    className="w-full h-full bg-cover bg-center bg-no-repeat"
+                    style={{ 
+                      backgroundImage: `url(${img})`,
+                      backgroundColor: '#1e293b' // Fallback color if image fails to load
+                    }}
                   >
-                    Explore Products
-                  </a>
+                    {/* Dark overlay for text readability */}
+                    <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60"></div>
+                  </div>
                 </div>
-                <div className="flex-1 relative flex justify-center gap-8 z-10">
-                  {slide.images.map((img, idx) => (
-                    <motion.img
-                      key={idx}
-                      src={img}
-                      alt={`hero-${idx}`}
-                      className="w-[350px] h-[300px] rounded-2xl shadow-2xl object-cover"
-                      style={{
-                        y: y,
-                        x: x,
-                        scale: scale,
-                        opacity: opacity,
-                        rotate: idx === 0 ? -5 : 5,
-                      }}
-                    />
-                  ))}
-                </div>
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+
+        {/* Light Rays Effect - Subtle */}
+        <div className="absolute inset-0 z-10 pointer-events-none">
+          <LightRays
+            raysOrigin="top-center"
+            raysColor="#3B82F6"
+            raysSpeed={1.2}
+            lightSpread={1.2}
+            rayLength={2}
+            pulsating={true}
+          />
+        </div>
+
+        {/* Hero Content - Overlay */}
+        <div className="relative z-20 max-w-7xl mx-auto px-6 md:px-12 lg:px-20 py-20 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="mb-6"
+          >
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-white mb-4 leading-tight">
+              <span className="block mb-1 text-2xl md:text-3xl lg:text-4xl">Welcome to</span>
+              <span className="block bg-gradient-to-r from-blue-400 via-cyan-300 to-blue-500 bg-clip-text text-transparent">
+                Asia Petrochemicals
+              </span>
+              <span className="block text-xl md:text-2xl lg:text-3xl mt-3 font-semibold text-blue-200">
+                - UAE
+              </span>
+            </h1>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="mb-6"
+          >
+            <p className="text-lg md:text-xl lg:text-2xl font-bold text-white mb-3">
+              The Leading name in Gulf for Specialty Chemicals Distribution.
+            </p>
+            <p className="text-base md:text-lg lg:text-xl text-blue-100 max-w-4xl mx-auto leading-relaxed">
+              ASIA PETROCHEM, based in UAE is one of the fastest growing name in Manufacturing, Distribution & International Trade of Chemicals and Downstream Petrochemicals.
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="flex flex-wrap justify-center gap-4 mt-10"
+          >
+            <a
+              href="#products"
+              className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-full shadow-2xl hover:shadow-blue-500/50 hover:scale-105 transition-all duration-300 text-lg"
+            >
+              Explore Products
+            </a>
+            <a
+              href="#about"
+              className="px-8 py-4 bg-white/10 backdrop-blur-md text-white font-semibold rounded-full border-2 border-white/30 hover:bg-white/20 hover:scale-105 transition-all duration-300 text-lg"
+            >
+              Learn More
+            </a>
+          </motion.div>
+        </div>
+
+        {/* Scroll Indicator */}
+        {/* <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1, duration: 1 }}
+          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20"
+        >
+          <motion.div
+            animate={{ y: [0, 10, 0] }}
+            transition={{ repeat: Infinity, duration: 2 }}
+            className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center"
+          >
+            <motion.div
+              animate={{ y: [0, 12, 0] }}
+              transition={{ repeat: Infinity, duration: 2 }}
+              className="w-1 h-3 bg-white/70 rounded-full mt-2"
+            ></motion.div>
+          </motion.div>
+        </motion.div> */}
       </section>
 
       {/* ABOUT SECTION */}
       <section
+        id="about"
         ref={aboutSectionRef}
         className="py-16 md:py-24 px-6 md:px-12 bg-white relative z-10"
       >
@@ -277,7 +364,7 @@ export default function HomePage() {
           <div className="flex-1 flex justify-center">
             <img
               ref={aboutImageRef}
-              src={heroSlides[activeHeroIndex].images[0]}
+              src={heroImages[0] || "/img/homeabout.webp"}
               alt="About Image"
               className="w-[400px] h-[400px] rounded-xl shadow-xl object-cover transition-all duration-700"
             />
@@ -380,6 +467,79 @@ export default function HomePage() {
               <p className="text-sm text-[#374151]">{n.desc}</p>
             </motion.div>
           ))}
+        </div>
+      </section>
+
+      {/* GROUP VERTICALS SECTION */}
+      <section className="py-16 md:py-24 px-6 md:px-12 bg-gradient-to-br from-slate-50 via-blue-50 to-slate-100 relative overflow-hidden">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `radial-gradient(circle at 2px 2px, #1e3a8a 1px, transparent 0)`,
+            backgroundSize: '40px 40px'
+          }}></div>
+        </div>
+
+        <div className="max-w-7xl mx-auto relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#1e3a8a] mb-4">
+              Group Verticals
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Explore our comprehensive range of specialized business divisions
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6">
+            {groupVerticals.map((vertical, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, scale: 0.9, y: 20 }}
+                whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: i * 0.1 }}
+                viewport={{ once: true }}
+                whileHover={{ scale: 1.05, y: -5 }}
+                className="group cursor-pointer"
+              >
+                <Link to={vertical.path}>
+                  <div className={`${vertical.color} rounded-2xl p-6 md:p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:rotate-1 relative overflow-hidden`}>
+                    {/* Diagonal Stripes Pattern */}
+                    <div className="absolute inset-0 opacity-20" style={{
+                      backgroundImage: `repeating-linear-gradient(
+                        45deg,
+                        transparent,
+                        transparent 10px,
+                        rgba(255,255,255,0.1) 10px,
+                        rgba(255,255,255,0.1) 20px
+                      )`
+                    }}></div>
+                    
+                    {/* Content */}
+                    <div className="relative z-10">
+                      <h3 className="text-white font-bold text-lg md:text-xl leading-tight">
+                        {vertical.name}
+                      </h3>
+                    </div>
+
+                    {/* Hover Arrow */}
+                    <motion.div
+                      initial={{ x: -20, opacity: 0 }}
+                      whileHover={{ x: 0, opacity: 1 }}
+                      className="absolute bottom-4 right-4 text-white text-2xl"
+                    >
+                      →
+                    </motion.div>
+                  </div>
+                </Link>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
 

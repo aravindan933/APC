@@ -3,10 +3,10 @@ import Typewriter from "typewriter-effect";
 
 const Bitumen = () => {
   const products = [
-    { title: "Bitumen 60/70", grade: "Penetration Grade", tds: "/public/pdf/Bitumen-60-70.pdf", img: "/img/bitumen-60-70.jpg" },
-    { title: "Bitumen 80/100", grade: "Penetration Grade", tds: "/public/pdf/Bitumen-80-100.pdf", img: "/img/bitumen-80-100.jpg" },
-    { title: "Bitumen Cutback MC30", grade: "Cutback Grade", tds: "/public/pdf/Bitumen-Cutback-MC-30.pdf", img: "/img/bitumen-mc30.jpg" },
-    { title: "Bitumen Cutback MC70", grade: "Cutback Grade", tds: "/public/pdf/Bitumen-Cutback-MC-70.pdf", img: "/img/bitumen-mc70.jpg" },
+    { title: "Bitumen 60/70", grade: "Penetration Grade", tds: "/pdf/Bitumen-60-70.pdf", img: "/img/bitumen-60-70.jpg" },
+    { title: "Bitumen 80/100", grade: "Penetration Grade", tds: "/pdf/Bitumen-80-100.pdf", img: "/img/bitumen-80-100.jpg" },
+    { title: "Bitumen Cutback MC30", grade: "Cutback Grade", tds: "/pdf/Bitumen-Cutback-MC-30.pdf", img: "/img/bitumen-mc30.jpg" },
+    { title: "Bitumen Cutback MC70", grade: "Cutback Grade", tds: "/pdf/Bitumen-Cutback-MC-70.pdf", img: "/img/bitumen-mc70.jpg" },
     { title: "Gilsonite", grade: "Special Product", tds: "/pdf/gilsonite.pdf", img: "/img/gilsonite.jpg" },
   ];
 
@@ -24,7 +24,7 @@ const Bitumen = () => {
     {/* HERO / BANNER SECTION */}
     <section className="relative w-full h-96">
       <img
-        src="/public/img/bitumen-banner.jpg" // replace with your actual banner image path
+        src="/img/bitumen-banner.jpg" // replace with your actual banner image path
         alt="Bitumen Banner"
         className="w-full h-full object-cover"
       />
@@ -60,7 +60,7 @@ const Bitumen = () => {
           {/* IMAGE */}
           <div className="flex-1 flex justify-center">
             <img
-              src="/public/img/bitumen.jpg"
+              src="/img/bitumen.jpg"
               alt="Bitumen"
               className="w-[350px] rounded-3xl shadow-2xl border-4 border-teal-100 dark:border-teal-700 object-cover transition-transform duration-500 hover:scale-105"
             />

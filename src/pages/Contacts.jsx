@@ -40,12 +40,12 @@ const Contacts = () => {
 
   // Updated contact options with links
   const contactOptions = [
-    {
-      icon: <FaComments size={35} />,
-      title: "Live Chat",
-      text: "Instant real-time support",
-      link: "https://yourwebsite.com/livechat", // Replace with your live chat URL
-    },
+    // {
+    //   icon: <FaComments size={35} />,
+    //   title: "Live Chat",
+    //   text: "Instant real-time support",
+    //   link: "https://yourwebsite.com/livechat", // Replace with your live chat URL
+    // },
     {
       icon: <FaEnvelope size={35} />,
       title: "Email",
@@ -55,14 +55,14 @@ const Contacts = () => {
     {
       icon: <FaPhone size={35} />,
       title: "Phone",
-      text: "Speak to us directly",
-      link: "tel:+971501234567", // Replace with your phone number
+      text: "Speak to us directly: +971 50 899 5667",
+      link: "tel:+971508995667", // Replace with your phone number
     },
     {
       icon: <FaWhatsapp size={35} className="text-green-500" />,
       title: "WhatsApp",
       text: "Chat on WhatsApp",
-      link: "https://wa.me/971501234567", // Replace with your WhatsApp number
+      link: "https://wa.me/971508995667", // Replace with your WhatsApp number
     },
   ];
 
@@ -88,7 +88,7 @@ const Contacts = () => {
       <section className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 py-16 px-4">
         {/* Right Image */}
         <motion.div variants={fadeUp} initial="hidden" whileInView="visible" transition={{ duration: 0.6 }}>
-          <img src="/public/img/Contactlogo.jpg" alt="Contactlogo" className="w-full rounded-xl shadow-lg" />
+          <img src="/img/Contactlogo.jpg" alt="Contactlogo" className="w-full rounded-xl shadow-lg" />
         </motion.div>
 
         {/* Form with Rotating Text */}
@@ -115,7 +115,7 @@ const Contacts = () => {
       <section className="max-w-6xl mx-auto py-16 px-4">
         <h2 className="text-3xl font-bold text-center mb-4">Connect With Our Team</h2>
         <p className="text-center text-gray-600 mb-10">Choose a preferred method below to reach out for assistance or inquiries.</p>
-        <div className="grid md:grid-cols-4 gap-8">
+        <div className="flex flex-wrap justify-center gap-8">
           {contactOptions.map((item, i) => (
             <motion.a
               key={i}
@@ -127,11 +127,11 @@ const Contacts = () => {
               whileInView="visible"
               transition={{ delay: i * 0.1 }}
               whileHover={{ scale: 1.08 }}
-              className="bg-white p-6 rounded-xl shadow-lg text-center hover:shadow-2xl transition cursor-pointer flex flex-col items-center"
+              className="bg-white p-6 rounded-xl shadow-lg text-center hover:shadow-2xl transition cursor-pointer flex flex-col items-center min-w-[200px] max-w-[250px]"
             >
               <div className="text-blue-600 mb-3 animate-bounce">{item.icon}</div>
               <h3 className="font-bold text-lg">{item.title}</h3>
-              <p className="text-gray-600">{item.text}</p>
+              <p className="text-gray-600 text-sm">{item.text}</p>
             </motion.a>
           ))}
         </div>

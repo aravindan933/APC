@@ -26,7 +26,7 @@ const PetroleumDerivatives = () => {
             <h1 className="text-4xl md:text-5xl font-extrabold mb-4 drop-shadow-lg">
               Petroleum Products
             </h1>
-            <p className="text-lg md:text-xl drop-shadow-sm">
+            <div className="text-lg md:text-xl drop-shadow-sm">
               <Typewriter
                 options={{
                   strings: [
@@ -40,7 +40,7 @@ const PetroleumDerivatives = () => {
                   deleteSpeed: 30,
                 }}
               />
-            </p>
+            </div>
           </div>
         </div>
       </section>
@@ -108,80 +108,80 @@ const PetroleumDerivatives = () => {
           {/* Base Oils */}
           <div className="bg-white dark:bg-gray-800 p-6 rounded-3xl shadow-lg flex flex-col items-center transition-transform hover:scale-105">
             <div className="w-full h-48 flex items-center justify-center mb-4 rounded-xl overflow-hidden bg-gray-50 dark:bg-gray-700">
-              <img src="/public/img/base-oil.webp" alt="Base Oils" className="max-w-full max-h-full object-contain" />
+              <img src="/img/base-oil.webp" alt="Base Oils" className="max-w-full max-h-full object-contain" />
             </div>
             <h3 className="text-xl font-semibold mb-3 text-[#1e3a8a] text-center">Base Oils</h3>
             <div className="flex flex-wrap justify-center gap-2 mb-2">
-              <a href="/public/pdf/SN-150.pdf" download className="px-3 py-1 bg-teal-500 text-white rounded-lg text-sm hover:bg-teal-600 transition whitespace-nowrap">SN 150.pdf</a>
-              <a href="/public/pdf/SN-200.pdf" download className="px-3 py-1 bg-teal-500 text-white rounded-lg text-sm hover:bg-teal-600 transition whitespace-nowrap">SN 500.pdf</a>
-              <a href="/public/pdf/BS-150.pdf" download className="px-3 py-1 bg-teal-500 text-white rounded-lg text-sm hover:bg-teal-600 transition whitespace-nowrap">BS 150.pdf</a>
-              <a href="/public/pdf/GSN-150.pdf" download className="px-3 py-1 bg-teal-500 text-white rounded-lg text-sm hover:bg-teal-600 transition whitespace-nowrap">GSN 150.pdf</a>
-              <a href="/public/pdf/SN-200.pdf" download className="px-3 py-1 bg-teal-500 text-white rounded-lg text-sm hover:bg-teal-600 transition whitespace-nowrap">SN 200.pdf</a>
-              <a href="/public/pdf/GSN-500.pdf" download className="px-3 py-1 bg-teal-500 text-white rounded-lg text-sm hover:bg-teal-600 transition whitespace-nowrap">GSN 500.pdf</a>
-              <a href="/public/pdf/SN-600.pdf" download className="px-3 py-1 bg-teal-500 text-white rounded-lg text-sm hover:bg-teal-600 transition whitespace-nowrap">SN 600.pdf</a>
-              <a href="/public/pdf/Cst-4.pdf" download className="px-3 py-1 bg-teal-500 text-white rounded-lg text-sm hover:bg-teal-600 transition whitespace-nowrap">Cst 4.pdf</a>
-              <a href="/public/pdf/Cst-6.pdf" download className="px-3 py-1 bg-teal-500 text-white rounded-lg text-sm hover:bg-teal-600 transition whitespace-nowrap">Cst 6.pdf</a>
-              <a href="/public/pdf/Cst-8.pdf" download className="px-3 py-1 bg-teal-500 text-white rounded-lg text-sm hover:bg-teal-600 transition whitespace-nowrap">Cst 8.pdf</a>
-              <a href="//public/pdf/Recycle-Base-Oil-SN-150.pdf" download className="px-3 py-1 bg-teal-500 text-white rounded-lg text-sm hover:bg-teal-600 transition whitespace-nowrap">Recycle Base Oil SN-150.pdf</a>
-              <a href="/public/pdf/Recycle-Base-Oil-SN-300.pdf" download className="px-3 py-1 bg-teal-500 text-white rounded-lg text-sm hover:bg-teal-600 transition whitespace-nowrap">Recycle Base Oil SN-300.pdf</a>
+              <a href="/pdf/SN-150.pdf" download className="px-3 py-1 bg-teal-500 text-white rounded-lg text-sm hover:bg-teal-600 transition whitespace-nowrap">SN 150.pdf</a>
+              <a href="/pdf/SN-200.pdf" download className="px-3 py-1 bg-teal-500 text-white rounded-lg text-sm hover:bg-teal-600 transition whitespace-nowrap">SN 500.pdf</a>
+              <a href="/pdf/BS-150.pdf" download className="px-3 py-1 bg-teal-500 text-white rounded-lg text-sm hover:bg-teal-600 transition whitespace-nowrap">BS 150.pdf</a>
+              <a href="/pdf/GSN-150.pdf" download className="px-3 py-1 bg-teal-500 text-white rounded-lg text-sm hover:bg-teal-600 transition whitespace-nowrap">GSN 150.pdf</a>
+              <a href="/pdf/SN-200.pdf" download className="px-3 py-1 bg-teal-500 text-white rounded-lg text-sm hover:bg-teal-600 transition whitespace-nowrap">SN 200.pdf</a>
+              <a href="/pdf/GSN-500.pdf" download className="px-3 py-1 bg-teal-500 text-white rounded-lg text-sm hover:bg-teal-600 transition whitespace-nowrap">GSN 500.pdf</a>
+              <a href="/pdf/SN-600.pdf" download className="px-3 py-1 bg-teal-500 text-white rounded-lg text-sm hover:bg-teal-600 transition whitespace-nowrap">SN 600.pdf</a>
+              <a href="/pdf/Cst-4.pdf" download className="px-3 py-1 bg-teal-500 text-white rounded-lg text-sm hover:bg-teal-600 transition whitespace-nowrap">Cst 4.pdf</a>
+              <a href="/pdf/Cst-6.pdf" download className="px-3 py-1 bg-teal-500 text-white rounded-lg text-sm hover:bg-teal-600 transition whitespace-nowrap">Cst 6.pdf</a>
+              <a href="/pdf/Cst-8.pdf" download className="px-3 py-1 bg-teal-500 text-white rounded-lg text-sm hover:bg-teal-600 transition whitespace-nowrap">Cst 8.pdf</a>
+              <a href="/pdf/Recycle-Base-Oil-SN-150.pdf" download className="px-3 py-1 bg-teal-500 text-white rounded-lg text-sm hover:bg-teal-600 transition whitespace-nowrap">Recycle Base Oil SN-150.pdf</a>
+              <a href="/pdf/Recycle-Base-Oil-SN-300.pdf" download className="px-3 py-1 bg-teal-500 text-white rounded-lg text-sm hover:bg-teal-600 transition whitespace-nowrap">Recycle Base Oil SN-300.pdf</a>
             </div>
           </div>
 
           {/* Fuel Oils */}
           <div className="bg-white dark:bg-gray-800 p-6 rounded-3xl shadow-lg flex flex-col items-center transition-transform hover:scale-105">
             <div className="w-full h-48 flex items-center justify-center mb-4 rounded-xl overflow-hidden bg-gray-50 dark:bg-gray-700">
-              <img src="/public/img/fuel-oil.jpg" alt="Fuel Oils" className="max-w-full max-h-full object-contain" />
+              <img src="/img/fuel-oil.jpg" alt="Fuel Oils" className="max-w-full max-h-full object-contain" />
             </div>
             <h3 className="text-xl font-semibold mb-3 text-[#1e3a8a] text-center">Fuel Oils</h3>
             <div className="flex flex-wrap justify-center gap-2 mb-2">
-              <a href="/public/pdf/CST-180.pdf" download className="px-3 py-1 bg-teal-500 text-white rounded-lg text-sm hover:bg-teal-600 transition whitespace-nowrap">Cst 180.pdf</a>
-              <a href="/public/pdf/CST-280.pdf" download className="px-3 py-1 bg-teal-500 text-white rounded-lg text-sm hover:bg-teal-600 transition whitespace-nowrap">Cst 280.pdf</a>
-              <a href="/public/pdf/CST-380.pdf" download className="px-3 py-1 bg-teal-500 text-white rounded-lg text-sm hover:bg-teal-600 transition whitespace-nowrap">Cst 380.pdf</a>
+              <a href="/pdf/CST-180.pdf" download className="px-3 py-1 bg-teal-500 text-white rounded-lg text-sm hover:bg-teal-600 transition whitespace-nowrap">Cst 180.pdf</a>
+              <a href="/pdf/CST-280.pdf" download className="px-3 py-1 bg-teal-500 text-white rounded-lg text-sm hover:bg-teal-600 transition whitespace-nowrap">Cst 280.pdf</a>
+              <a href="/pdf/CST-380.pdf" download className="px-3 py-1 bg-teal-500 text-white rounded-lg text-sm hover:bg-teal-600 transition whitespace-nowrap">Cst 380.pdf</a>
             </div>
           </div>
 
           {/* Sulphur */}
           <div className="bg-white dark:bg-gray-800 p-6 rounded-3xl shadow-lg flex flex-col items-center transition-transform hover:scale-105">
             <div className="w-full h-48 flex items-center justify-center mb-4 rounded-xl overflow-hidden bg-gray-50 dark:bg-gray-700">
-              <img src="/public/img/sulphur.jpg" alt="Sulphur" className="max-w-full max-h-full object-contain" />
+              <img src="/img/sulphur.jpg" alt="Sulphur" className="max-w-full max-h-full object-contain" />
             </div>
             <h3 className="text-xl font-semibold mb-3 text-[#1e3a8a] text-center">Sulphur</h3>
             <div className="flex flex-wrap justify-center gap-2 mb-2">
-              <a href="/public/pdf/Granular.pdf" download className="px-3 py-1 bg-teal-500 text-white rounded-lg text-sm hover:bg-teal-600 transition whitespace-nowrap">Granulars Lumps.pdf</a>
+              <a href="/pdf/Granular.pdf" download className="px-3 py-1 bg-teal-500 text-white rounded-lg text-sm hover:bg-teal-600 transition whitespace-nowrap">Granulars Lumps.pdf</a>
             </div>
           </div>
 
           {/* Rubber Processing Oils */}
           <div className="bg-white dark:bg-gray-800 p-6 rounded-3xl shadow-lg flex flex-col items-center transition-transform hover:scale-105">
             <div className="w-full h-48 flex items-center justify-center mb-4 rounded-xl overflow-hidden bg-gray-50 dark:bg-gray-700">
-              <img src="/public/img/rubber-oil.jpg" alt="Rubber Processing Oils" className="max-w-full max-h-full object-contain" />
+              <img src="/img/rubber-oil.jpg" alt="Rubber Processing Oils" className="max-w-full max-h-full object-contain" />
             </div>
             <h3 className="text-xl font-semibold mb-3 text-[#1e3a8a] text-center">Rubber Processing Oils</h3>
             <div className="flex flex-wrap justify-center gap-2 mb-2">
-              <a href="/public/pdf/Aromatic-Rubber-Processing-Oil.pdf" download className="px-3 py-1 bg-teal-500 text-white rounded-lg text-sm hover:bg-teal-600 transition whitespace-nowrap">Aromatic Rubber Processing Oil.pdf</a>
+              <a href="/pdf/Aromatic-Rubber-Processing-Oil.pdf" download className="px-3 py-1 bg-teal-500 text-white rounded-lg text-sm hover:bg-teal-600 transition whitespace-nowrap">Aromatic Rubber Processing Oil.pdf</a>
             </div>
           </div>
 
           {/* Waxes */}
           <div className="bg-white dark:bg-gray-800 p-6 rounded-3xl shadow-lg flex flex-col items-center transition-transform hover:scale-105">
             <div className="w-full h-48 flex items-center justify-center mb-4 rounded-xl overflow-hidden bg-gray-50 dark:bg-gray-700">
-              <img src="/public/img/waxes.jpg" alt="Waxes" className="max-w-full max-h-full object-contain" />
+              <img src="/img/waxes.jpg" alt="Waxes" className="max-w-full max-h-full object-contain" />
             </div>
             <h3 className="text-xl font-semibold mb-3 text-[#1e3a8a] text-center">Waxes</h3>
             <div className="flex flex-wrap justify-center gap-2 mb-2">
-              <a href="/public/pdf/Slack-Waxes.pdf" download className="px-3 py-1 bg-teal-500 text-white rounded-lg text-sm hover:bg-teal-600 transition whitespace-nowrap">Slack Wax.pdf</a>
-              <a href="/public/pdf/Residue-Wax.pdf" download className="px-3 py-1 bg-teal-500 text-white rounded-lg text-sm hover:bg-teal-600 transition whitespace-nowrap">Residual Wax.pdf</a>
+              <a href="/pdf/Slack-Waxes.pdf" download className="px-3 py-1 bg-teal-500 text-white rounded-lg text-sm hover:bg-teal-600 transition whitespace-nowrap">Slack Wax.pdf</a>
+              <a href="/pdf/Residue-Wax.pdf" download className="px-3 py-1 bg-teal-500 text-white rounded-lg text-sm hover:bg-teal-600 transition whitespace-nowrap">Residual Wax.pdf</a>
             </div>
           </div>
 
           {/* Urea & Fertilizers */}
           <div className="bg-white dark:bg-gray-800 p-6 rounded-3xl shadow-lg flex flex-col items-center transition-transform hover:scale-105">
             <div className="w-full h-48 flex items-center justify-center mb-4 rounded-xl overflow-hidden bg-gray-50 dark:bg-gray-700">
-              <img src="/public/img/Urea & Fertilizers.webp" alt="Urea & Fertilizers" className="max-w-full max-h-full object-contain" />
+              <img src="/img/Urea & Fertilizers.webp" alt="Urea & Fertilizers" className="max-w-full max-h-full object-contain" />
             </div>
             <h3 className="text-xl font-semibold mb-3 text-[#1e3a8a] text-center">Urea & Fertilizers</h3>
             <div className="flex flex-wrap justify-center gap-2 mb-2">
-              <a href="/public/pdf/Urea-46.pdf" download className="px-3 py-1 bg-teal-500 text-white rounded-lg text-sm hover:bg-teal-600 transition whitespace-nowrap">Urea.pdf</a>
+              <a href="/pdf/Urea-46.pdf" download className="px-3 py-1 bg-teal-500 text-white rounded-lg text-sm hover:bg-teal-600 transition whitespace-nowrap">Urea.pdf</a>
             </div>
           </div>
 

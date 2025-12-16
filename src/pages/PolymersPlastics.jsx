@@ -19,7 +19,7 @@ const PolymersPlastics = () => {
       {/* HERO SECTION */}
     <section 
       className="relative w-full h-[450px] bg-center bg-cover bg-no-repeat flex items-center justify-center text-center"
-      style={{ backgroundImage: "url('/public/img/polymer.jpg')" }}  // ← your banner image
+      style={{ backgroundImage: "url('/img/polymer.jpg')" }}  // ← your banner image
     >
       {/* DARK OVERLAY */}
       <div className="absolute inset-0 bg-black bg-opacity-50"></div>
@@ -52,7 +52,7 @@ const PolymersPlastics = () => {
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-stretch gap-8">
           <div className="flex-1 flex justify-center">
             <img
-              src="/public/img/polymers.webp"
+              src="/img/polymers.webp"
               alt="Polymers & Plastics"
               className="w-[400px] h-full rounded-3xl shadow-2xl border-4 border-blue-100 dark:border-blue-700 object-cover transition-transform duration-500 hover:scale-105"
             />
@@ -102,13 +102,13 @@ const PolymersPlastics = () => {
               <div className="p-4 rounded-xl mb-4 bg-teal-100 dark:bg-teal-900">
                 <h4 className="font-semibold text-[#064e3b] dark:text-teal-400 mb-2">HDPE</h4>
                 <div className="flex flex-wrap gap-2">
-                  <a href="/public/pdf/HB0035.pdf" target="_blank" className="px-3 py-2 bg-teal-600 text-white rounded-lg hover:bg-teal-700 transition">Blow Grade HB0035 (BL3)</a>
-                  <a href="/public/pdf/HM8355-(BL4).pdf" target="_blank" className="px-3 py-2 bg-teal-600 text-white rounded-lg hover:bg-teal-700 transition">Blow Grade HM8355 (BL4)</a>
-                  <a href="/public/pdf/HD-52518.pdf" target="_blank" className="px-3 py-2 bg-teal-500 text-white rounded-lg hover:bg-teal-600 transition">Injection HD52518</a>
-                  <a href="/public/pdf/HDPE-INJECTION-60505.pdf" target="_blank" className="px-3 py-2 bg-teal-500 text-white rounded-lg hover:bg-teal-600 transition">Injection HD-60505</a>
-                  <a href="/public/pdf/" target="_blank" className="px-3 py-2 bg-teal-500 text-white rounded-lg hover:bg-teal-600 transition">Injection HD-60507</a>
-                  <a href="/public/pdf/HD-7000F-300516.pdf" target="_blank" className="px-3 py-2 bg-teal-400 text-white rounded-lg hover:bg-teal-500 transition">HD Film HD7000F</a>
-                  <a href="/public/pdf/HFI5110-300516.pdf" target="_blank" className="px-3 py-2 bg-teal-400 text-white rounded-lg hover:bg-teal-500 transition">HD Film HFI5110</a>
+                  <a href="/pdf/HB0035.pdf" target="_blank" className="px-3 py-2 bg-teal-600 text-white rounded-lg hover:bg-teal-700 transition">Blow Grade HB0035 (BL3)</a>
+                  <a href="/pdf/HM8355-(BL4).pdf" target="_blank" className="px-3 py-2 bg-teal-600 text-white rounded-lg hover:bg-teal-700 transition">Blow Grade HM8355 (BL4)</a>
+                  <a href="/pdf/HD-52518.pdf" target="_blank" className="px-3 py-2 bg-teal-500 text-white rounded-lg hover:bg-teal-600 transition">Injection HD52518</a>
+                  <a href="/pdf/HDPE-INJECTION-60505.pdf" target="_blank" className="px-3 py-2 bg-teal-500 text-white rounded-lg hover:bg-teal-600 transition">Injection HD-60505</a>
+                  <a href="/pdf/" target="_blank" className="px-3 py-2 bg-teal-500 text-white rounded-lg hover:bg-teal-600 transition">Injection HD-60507</a>
+                  <a href="/pdf/HD-7000F-300516.pdf" target="_blank" className="px-3 py-2 bg-teal-400 text-white rounded-lg hover:bg-teal-500 transition">HD Film HD7000F</a>
+                  <a href="/pdf/HFI5110-300516.pdf" target="_blank" className="px-3 py-2 bg-teal-400 text-white rounded-lg hover:bg-teal-500 transition">HD Film HFI5110</a>
                 </div>
               </div>
 
@@ -116,8 +116,8 @@ const PolymersPlastics = () => {
               <div className="p-4 rounded-xl mb-4 bg-blue-100 dark:bg-blue-900">
                 <h4 className="font-semibold text-[#1e3a8a] dark:text-blue-300 mb-2">LDPE</h4>
                 <div className="flex flex-wrap gap-2">
-                  <a href="/public/pdf/LDPE-1019.pdf" target="_blank" className="px-3 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">Film Grade 1019</a>
-                  <a href="/public/pdf/LDPE-2420D.pdf" target="_blank" className="px-3 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">Film Grade 2420D</a>
+                  <a href="/pdf/LDPE-1019.pdf" target="_blank" className="px-3 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">Film Grade 1019</a>
+                  <a href="/pdf/LDPE-2420D.pdf" target="_blank" className="px-3 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">Film Grade 2420D</a>
                 </div>
               </div>
 
@@ -125,7 +125,7 @@ const PolymersPlastics = () => {
               <div className="p-4 rounded-xl bg-purple-100 dark:bg-purple-900">
                 <h4 className="font-semibold text-[#6b21a8] dark:text-purple-300 mb-2">LLDPE</h4>
                 <div className="flex flex-wrap gap-2">
-                  <a href="/public/pdf/LLDPE-22501AA22501KJ.pdf" target="_blank" className="px-3 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition">Film Grade 2201AA, Grade 22501KJ</a>
+                  <a href="/pdf/LLDPE-22501AA22501KJ.pdf" target="_blank" className="px-3 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition">Film Grade 2201AA, Grade 22501KJ</a>
                 </div>
               </div>
             </div>
@@ -138,31 +138,31 @@ const PolymersPlastics = () => {
               <div className="p-4 rounded-xl mb-4 bg-pink-100 dark:bg-pink-900">
                 <h4 className="font-semibold text-[#9d174d] dark:text-pink-300 mb-2">Polypropylene - Homopolymer</h4>
                 <div className="flex flex-wrap gap-2">
-                  <a href="/public/pdf/HP550J.pdf" target="_blank" className="px-3 py-2 bg-pink-600 text-white rounded-lg hover:bg-pink-700 transition">HP550J</a>
-                  <a href="/public/pdf/HP510L.pdf" target="_blank" className="px-3 py-2 bg-pink-600 text-white rounded-lg hover:bg-pink-700 transition">HP510L</a>
-                  <a href="/public/pdF/HP525J.pdf" target="_blank" className="px-3 py-2 bg-pink-600 text-white rounded-lg hover:bg-pink-700 transition">HP525J</a>
-                  <a href="/public/pdf/HP552R.pdf" target="_blank" className="px-3 py-2 bg-pink-600 text-white rounded-lg hover:bg-pink-700 transition">HP552R</a>
-                  <a href="/public/pdf/HP564S.pdf" target="_blank" className="px-3 py-2 bg-pink-600 text-white rounded-lg hover:bg-pink-700 transition">HP564S</a>
+                  <a href="/pdf/HP550J.pdf" target="_blank" className="px-3 py-2 bg-pink-600 text-white rounded-lg hover:bg-pink-700 transition">HP550J</a>
+                  <a href="/pdf/HP510L.pdf" target="_blank" className="px-3 py-2 bg-pink-600 text-white rounded-lg hover:bg-pink-700 transition">HP510L</a>
+                  <a href="/pdf/HP525J.pdf" target="_blank" className="px-3 py-2 bg-pink-600 text-white rounded-lg hover:bg-pink-700 transition">HP525J</a>
+                  <a href="/pdf/HP552R.pdf" target="_blank" className="px-3 py-2 bg-pink-600 text-white rounded-lg hover:bg-pink-700 transition">HP552R</a>
+                  <a href="/pdf/HP564S.pdf" target="_blank" className="px-3 py-2 bg-pink-600 text-white rounded-lg hover:bg-pink-700 transition">HP564S</a>
                 </div>
               </div>
 
               {/* Random Copolymer */}
               <div className="p-4 rounded-xl mb-4 bg-orange-100 dark:bg-orange-900">
                 <h4 className="font-semibold text-[#c2410c] dark:text-orange-300 mb-2">Polypropylene - Random Copolymer</h4>
-                <a href="/public/pdf/PP548R-RANDOM-COPOLYMER.pdf" target="_blank" className="px-3 py-2 bg-orange-600 text-white rounded-lg hover:bg-orange-700 transition">PP548R</a>
+                <a href="/pdf/PP548R-RANDOM-COPOLYMER.pdf" target="_blank" className="px-3 py-2 bg-orange-600 text-white rounded-lg hover:bg-orange-700 transition">PP548R</a>
               </div>
 
               {/* Impact Copolymer */}
               <div className="p-4 rounded-xl mb-4 bg-yellow-100 dark:bg-yellow-900">
                 <h4 className="font-semibold text-[#78350f] dark:text-yellow-300 mb-2">Polypropylene - Impact Copolymer</h4>
-                <a href="/public/pdf/PP440L.pdf" target="_blank" className="px-3 py-2 bg-yellow-600 text-white rounded-lg hover:bg-yellow-700 transition">PP440L</a>
+                <a href="/pdf/PP440L.pdf" target="_blank" className="px-3 py-2 bg-yellow-600 text-white rounded-lg hover:bg-yellow-700 transition">PP440L</a>
               </div>
 
               {/* PVC */}
               <div className="p-4 rounded-xl bg-green-100 dark:bg-green-900">
                 <h4 className="font-semibold text-[#065f46] dark:text-green-300 mb-2">PVC</h4>
-                <a href="/public/pdf/PVC-K65.pdf" target="_blank" className="px-3 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition">PVC K65</a>
-                <a href="/public/pdf/PVC-K67.pdf" target="_blank" className="px-3 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition">PVC K67</a>
+                <a href="/pdf/PVC-K65.pdf" target="_blank" className="px-3 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition">PVC K65</a>
+                <a href="/pdf/PVC-K67.pdf" target="_blank" className="px-3 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition">PVC K67</a>
               </div>
             </div>
 

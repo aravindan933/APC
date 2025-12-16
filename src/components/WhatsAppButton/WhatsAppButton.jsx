@@ -11,7 +11,7 @@ const WhatsAppAssistant = () => {
 
   const handleClick = () => {
     window.open(
-      "https://wa.me/971500000000?text=Hello%20Asia%20Petrochem,%20I%20would%20like%20to%20connect%20with%20Sales.",
+      "https://wa.me/971508995667?text=Hello%20Asia%20Petrochem,%20I%20would%20like%20to%20connect%20with%20Sales.",
       "_blank"
     );
   };
@@ -24,7 +24,7 @@ const WhatsAppAssistant = () => {
           className="bg-white text-gray-800 px-4 py-3 rounded-xl shadow-lg text-sm flex items-center gap-2 max-w-xs animate-slideIn cursor-pointer"
           onClick={handleClick}
         >
-          <img src="/public/img/whats.png" alt="WhatsApp" className="w-5 h-5" />
+          <img src="/img/whats.png" alt="WhatsApp" className="w-5 h-5" />
           <div>
             <p className="font-semibold">Hi! Welcome to Asia Petrochem</p>
             <p className="text-xs text-gray-600">
@@ -39,7 +39,7 @@ const WhatsAppAssistant = () => {
         onClick={handleClick}
         className="w-14 h-14 bg-[white] rounded-full flex items-center justify-center shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300"
       >
-        <img src="/public/img/whats2.jpg" alt="WhatsApp" className="w-7 h-7" />
+        <img src="/img/whats2.jpg" alt="WhatsApp" className="w-7 h-7" />
       </button>
     </div>
   );

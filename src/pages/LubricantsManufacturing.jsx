@@ -18,7 +18,7 @@ const LubricantsManufacturing = () => {
       {/* HERO SECTION */}
       <section className="relative w-full h-96">
         <img
-          src="/public/img/lubricants-banner.webp"
+          src="/img/lubricants-banner.webp"
           alt="Lubricants Banner"
           className="w-full h-full object-cover"
         />
@@ -53,7 +53,7 @@ const LubricantsManufacturing = () => {
           {/* IMAGE */}
           <div className="flex-1 flex justify-center">
             <img
-              src="/public/img/lubricants.webp"
+              src="/img/lubricants.webp"
               alt="Synol Lubricants"
               className="w-[400px] h-[400px] object-cover rounded-3xl shadow-2xl border-4 border-blue-100 dark:border-blue-700 transition-transform duration-500 hover:scale-105"
             />

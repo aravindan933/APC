@@ -19,7 +19,7 @@ const AcetatesManufacturing = () => {
       applications: "Solvent in Paint and UPR industry",
       tds: "/pdf/N-Butyl-Acetate-999-TDS.pdf",
       msds: "/pdf/N-Butyl-Acetate-999-MSDS.pdf",
-      img: "/public/img/N-Butyl Acetate.webp",
+      img: "/img/N-Butyl Acetate.webp",
     },
     {
       type: "Methyl Acetate",
@@ -27,7 +27,7 @@ const AcetatesManufacturing = () => {
       applications: "Coatings, Adhesives, Pharma, Printing Inks",
       tds: "/pdf/Methyl-Acetate-TDS.pdf",
       msds: "/pdf/Methyl-Acetate-MSDS.pdf",
-      img: "/public/img/Methyul.webp",
+      img: "/img/Methyul.webp",
     },
   ];
 
@@ -46,7 +46,7 @@ const AcetatesManufacturing = () => {
             <h1 className="text-4xl md:text-5xl font-extrabold mb-4 drop-shadow-lg">
               Acetates Manufacturing
             </h1>
-            <p className="text-lg md:text-xl mb-4 drop-shadow-sm">
+            <div className="text-lg md:text-xl mb-4 drop-shadow-sm">
               <Typewriter
                 options={{
                   strings: [
@@ -60,7 +60,7 @@ const AcetatesManufacturing = () => {
                   deleteSpeed: 30,
                 }}
               />
-            </p>
+            </div>
           </div>
         </div>
       </section>
@@ -102,7 +102,7 @@ const AcetatesManufacturing = () => {
             {/* DOWNLOAD PDF BUTTON */}
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="mt-4">
               <a
-                href="/public/pdf/ASIA PETROCHEMICALS PROFILE.pdf"
+                href="/pdf/ASIA PETROCHEMICALS PROFILE.pdf"
                 download
                 className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg shadow-lg transition duration-300"
               >

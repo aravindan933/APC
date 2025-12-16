@@ -19,7 +19,7 @@ const SolventsChemicals = () => {
 {/* HERO SECTION WITH BANNER IMAGE */}
 <section className="relative w-full h-96">
   <img
-    src="/public/img/solvents.jpg" // your banner image for solvents & chemicals
+    src="/img/solvents.jpg" // your banner image for solvents & chemicals
     alt="Solvents & Chemicals Banner"
     className="w-full h-full object-cover"
   />
@@ -28,7 +28,7 @@ const SolventsChemicals = () => {
       <h1 className="text-4xl md:text-5xl font-extrabold mb-4 drop-shadow-lg">
         Solvents & Chemicals
       </h1>
-      <p className="text-lg md:text-xl mb-4 drop-shadow-sm">
+      <div className="text-lg md:text-xl mb-4 drop-shadow-sm">
         <Typewriter
           options={{
             strings: [
@@ -42,7 +42,7 @@ const SolventsChemicals = () => {
             deleteSpeed: 30,
           }}
         />
-      </p>
+      </div>
     </div>
   </div>
 </section>
@@ -90,7 +90,7 @@ const SolventsChemicals = () => {
 
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="mt-4">
               <a
-                href="/public/pdf/ASIA PETROCHEMICALS PROFILE.pdf"
+                href="/pdf/ASIA PETROCHEMICALS PROFILE.pdf"
                 download
                 className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg shadow-lg transition duration-300"
               >
@@ -121,13 +121,13 @@ const SolventsChemicals = () => {
           <div className="bg-gray-50 dark:bg-gray-900 p-6 rounded-2xl shadow-md">
             <h3 className="text-xl font-semibold text-[#1e3a8a] mb-3">Alcohols</h3>
             <div className="flex flex-wrap gap-2">
-              <a href="/public/pdf/Methanol.pdf" download className="px-3 py-1 bg-teal-500 text-white rounded-lg text-sm hover:bg-teal-600 transition">Methanol</a>
-              <a href="/public/pdf/Ethanol-96.pdf" download className="px-3 py-1 bg-teal-500 text-white rounded-lg text-sm hover:bg-teal-600 transition">Ethanol 96%</a>
-              <a href="/public/pdf/Ethanol-99.pdf" download className="px-3 py-1 bg-teal-500 text-white rounded-lg text-sm hover:bg-teal-600 transition">Ethanol 99%</a>
-              <a href="/public/pdf/ISO-Butanol.pdf" download className="px-3 py-1 bg-teal-500 text-white rounded-lg text-sm hover:bg-teal-600 transition">ISO Butanol</a>
-              <a href="/public/pdf/N-Butanol.pdf" download className="px-3 py-1 bg-teal-500 text-white rounded-lg text-sm hover:bg-teal-600 transition">N Butanol</a>
-              <a href="/public/pdf/ISO-Propanol-99.pdf" download className="px-3 py-1 bg-teal-500 text-white rounded-lg text-sm hover:bg-teal-600 transition">ISO Propanol 99.9%</a>
-              <a href="/public/pdf/ISO-Propanol-45.pdf" download className="px-3 py-1 bg-teal-500 text-white rounded-lg text-sm hover:bg-teal-600 transition">ISO Propanol 45%</a>
+              <a href="/pdf/Methanol.pdf" download className="px-3 py-1 bg-teal-500 text-white rounded-lg text-sm hover:bg-teal-600 transition">Methanol</a>
+              <a href="/pdf/Ethanol-96.pdf" download className="px-3 py-1 bg-teal-500 text-white rounded-lg text-sm hover:bg-teal-600 transition">Ethanol 96%</a>
+              <a href="/pdf/Ethanol-99.pdf" download className="px-3 py-1 bg-teal-500 text-white rounded-lg text-sm hover:bg-teal-600 transition">Ethanol 99%</a>
+              <a href="/pdf/ISO-Butanol.pdf" download className="px-3 py-1 bg-teal-500 text-white rounded-lg text-sm hover:bg-teal-600 transition">ISO Butanol</a>
+              <a href="/pdf/N-Butanol.pdf" download className="px-3 py-1 bg-teal-500 text-white rounded-lg text-sm hover:bg-teal-600 transition">N Butanol</a>
+              <a href="/pdf/ISO-Propanol-99.pdf" download className="px-3 py-1 bg-teal-500 text-white rounded-lg text-sm hover:bg-teal-600 transition">ISO Propanol 99.9%</a>
+              <a href="/pdf/ISO-Propanol-45.pdf" download className="px-3 py-1 bg-teal-500 text-white rounded-lg text-sm hover:bg-teal-600 transition">ISO Propanol 45%</a>
             </div>
           </div>
 
@@ -135,13 +135,13 @@ const SolventsChemicals = () => {
           <div className="bg-gray-50 dark:bg-gray-900 p-6 rounded-2xl shadow-md">
             <h3 className="text-xl font-semibold text-[#1e3a8a] mb-3">Aromatics</h3>
             <div className="flex flex-wrap gap-2">
-              <a href="/public/pdf/Toluene.pdf" download className="px-3 py-1 bg-teal-500 text-white rounded-lg text-sm hover:bg-teal-600 transition">Toluene</a>
-              <a href="/public/pdf/Mix-Xylene.pdf" download className="px-3 py-1 bg-teal-500 text-white rounded-lg text-sm hover:bg-teal-600 transition">Mix Xylene</a>
-              <a href="/public/pdf/Benzene.pdf" download className="px-3 py-1 bg-teal-500 text-white rounded-lg text-sm hover:bg-teal-600 transition">Benzene</a>
-              <a href="/public/pdf/White-Spirit.pdf" download className="px-3 py-1 bg-teal-500 text-white rounded-lg text-sm hover:bg-teal-600 transition">White Spirit</a>
-              <a href="/public/pdf/Solvent-Naphtha-100.pdf" download className="px-3 py-1 bg-teal-500 text-white rounded-lg text-sm hover:bg-teal-600 transition">Solvent Naphtha 100</a>
-              <a href="/public/pdf/Solvent-Naphtha-150.pdf" download className="px-3 py-1 bg-teal-500 text-white rounded-lg text-sm hover:bg-teal-600 transition">Solvent Naphtha 150</a>
-              <a href="/public/pdf/Solvent-Naphtha-200.pdf" download className="px-3 py-1 bg-teal-500 text-white rounded-lg text-sm hover:bg-teal-600 transition">Solvent Naphtha 200</a>
+              <a href="/pdf/Toluene.pdf" download className="px-3 py-1 bg-teal-500 text-white rounded-lg text-sm hover:bg-teal-600 transition">Toluene</a>
+              <a href="/pdf/Mix-Xylene.pdf" download className="px-3 py-1 bg-teal-500 text-white rounded-lg text-sm hover:bg-teal-600 transition">Mix Xylene</a>
+              <a href="/pdf/Benzene.pdf" download className="px-3 py-1 bg-teal-500 text-white rounded-lg text-sm hover:bg-teal-600 transition">Benzene</a>
+              <a href="/pdf/White-Spirit.pdf" download className="px-3 py-1 bg-teal-500 text-white rounded-lg text-sm hover:bg-teal-600 transition">White Spirit</a>
+              <a href="/pdf/Solvent-Naphtha-100.pdf" download className="px-3 py-1 bg-teal-500 text-white rounded-lg text-sm hover:bg-teal-600 transition">Solvent Naphtha 100</a>
+              <a href="/pdf/Solvent-Naphtha-150.pdf" download className="px-3 py-1 bg-teal-500 text-white rounded-lg text-sm hover:bg-teal-600 transition">Solvent Naphtha 150</a>
+              <a href="/pdf/Solvent-Naphtha-200.pdf" download className="px-3 py-1 bg-teal-500 text-white rounded-lg text-sm hover:bg-teal-600 transition">Solvent Naphtha 200</a>
             </div>
           </div>
 
@@ -149,9 +149,9 @@ const SolventsChemicals = () => {
           <div className="bg-gray-50 dark:bg-gray-900 p-6 rounded-2xl shadow-md">
             <h3 className="text-xl font-semibold text-[#1e3a8a] mb-3">Glycols</h3>
             <div className="flex flex-wrap gap-2">
-              <a href="/public/pdf/DEG-DI-Ethylene-Glycol.pdf" download className="px-3 py-1 bg-teal-500 text-white rounded-lg text-sm hover:bg-teal-600 transition">DEG</a>
-              <a href="/public/pdf/MEG-Mono-Ethylene-Glycol.pdf" download className="px-3 py-1 bg-teal-500 text-white rounded-lg text-sm hover:bg-teal-600 transition">MEG</a>
-              <a href="/public/pdf/TEG-Tri-Ethylene-Glycol.pdf" download className="px-3 py-1 bg-teal-500 text-white rounded-lg text-sm hover:bg-teal-600 transition">TEG</a>
+              <a href="/pdf/DEG-DI-Ethylene-Glycol.pdf" download className="px-3 py-1 bg-teal-500 text-white rounded-lg text-sm hover:bg-teal-600 transition">DEG</a>
+              <a href="/pdf/MEG-Mono-Ethylene-Glycol.pdf" download className="px-3 py-1 bg-teal-500 text-white rounded-lg text-sm hover:bg-teal-600 transition">MEG</a>
+              <a href="/pdf/TEG-Tri-Ethylene-Glycol.pdf" download className="px-3 py-1 bg-teal-500 text-white rounded-lg text-sm hover:bg-teal-600 transition">TEG</a>
             </div>
           </div>
 
@@ -159,10 +159,10 @@ const SolventsChemicals = () => {
           <div className="bg-gray-50 dark:bg-gray-900 p-6 rounded-2xl shadow-md">
             <h3 className="text-xl font-semibold text-[#1e3a8a] mb-3">Ketones</h3>
             <div className="flex flex-wrap gap-2">
-              <a href="/public/pdf/MEK-Methyl-Ethyl-Ketone.pdf" download className="px-3 py-1 bg-teal-500 text-white rounded-lg text-sm hover:bg-teal-600 transition">MEK</a>
-              <a href="/public/pdf/MIBK-Methyl-Isobutyl-Ketone.pdf" download className="px-3 py-1 bg-teal-500 text-white rounded-lg text-sm hover:bg-teal-600 transition">MIBK</a>
-              <a href="/public/pdf/Acetone.pdf" download className="px-3 py-1 bg-teal-500 text-white rounded-lg text-sm hover:bg-teal-600 transition">Acetone</a>
-              <a href="/public/pdf/Hexane.pdf" download className="px-3 py-1 bg-teal-500 text-white rounded-lg text-sm hover:bg-teal-600 transition">Hexane</a>
+              <a href="/pdf/MEK-Methyl-Ethyl-Ketone.pdf" download className="px-3 py-1 bg-teal-500 text-white rounded-lg text-sm hover:bg-teal-600 transition">MEK</a>
+              <a href="/pdf/MIBK-Methyl-Isobutyl-Ketone.pdf" download className="px-3 py-1 bg-teal-500 text-white rounded-lg text-sm hover:bg-teal-600 transition">MIBK</a>
+              <a href="/pdf/Acetone.pdf" download className="px-3 py-1 bg-teal-500 text-white rounded-lg text-sm hover:bg-teal-600 transition">Acetone</a>
+              <a href="/pdf/Hexane.pdf" download className="px-3 py-1 bg-teal-500 text-white rounded-lg text-sm hover:bg-teal-600 transition">Hexane</a>
             </div>
           </div>
 
@@ -170,8 +170,8 @@ const SolventsChemicals = () => {
           <div className="bg-gray-50 dark:bg-gray-900 p-6 rounded-2xl shadow-md">
             <h3 className="text-xl font-semibold text-[#1e3a8a] mb-3">Monomers</h3>
             <div className="flex flex-wrap gap-2">
-              <a href="/public/pdf/Styrene-Monomer.pdf" download className="px-3 py-1 bg-teal-500 text-white rounded-lg text-sm hover:bg-teal-600 transition">Styrene Monomer</a>
-              <a href="/public/pdf/Vinyl-Acetate-Monomer.pdf" download className="px-3 py-1 bg-teal-500 text-white rounded-lg text-sm hover:bg-teal-600 transition">Vinyl Acetate Monomer</a>
+              <a href="/pdf/Styrene-Monomer.pdf" download className="px-3 py-1 bg-teal-500 text-white rounded-lg text-sm hover:bg-teal-600 transition">Styrene Monomer</a>
+              <a href="/pdf/Vinyl-Acetate-Monomer.pdf" download className="px-3 py-1 bg-teal-500 text-white rounded-lg text-sm hover:bg-teal-600 transition">Vinyl Acetate Monomer</a>
             </div>
           </div>
 
@@ -179,9 +179,9 @@ const SolventsChemicals = () => {
           <div className="bg-gray-50 dark:bg-gray-900 p-6 rounded-2xl shadow-md">
             <h3 className="text-xl font-semibold text-[#1e3a8a] mb-3">Amines</h3>
             <div className="flex flex-wrap gap-2">
-              <a href="/public/pdf/TEA-TRIETHANOLAMINE.pdf" download className="px-3 py-1 bg-teal-500 text-white rounded-lg text-sm hover:bg-teal-600 transition">TEA</a>
-              <a href="/public/pdf/MEA-Monoethanolamine.pdf" download className="px-3 py-1 bg-teal-500 text-white rounded-lg text-sm hover:bg-teal-600 transition">MEA</a>
-              <a href="/public/pdf/DEA-Diethanolamine.pdf" download className="px-3 py-1 bg-teal-500 text-white rounded-lg text-sm hover:bg-teal-600 transition">DEA</a>
+              <a href="/pdf/TEA-TRIETHANOLAMINE.pdf" download className="px-3 py-1 bg-teal-500 text-white rounded-lg text-sm hover:bg-teal-600 transition">TEA</a>
+              <a href="/pdf/MEA-Monoethanolamine.pdf" download className="px-3 py-1 bg-teal-500 text-white rounded-lg text-sm hover:bg-teal-600 transition">MEA</a>
+              <a href="/pdf/DEA-Diethanolamine.pdf" download className="px-3 py-1 bg-teal-500 text-white rounded-lg text-sm hover:bg-teal-600 transition">DEA</a>
             </div>
           </div>
 
@@ -189,9 +189,9 @@ const SolventsChemicals = () => {
           <div className="bg-gray-50 dark:bg-gray-900 p-6 rounded-2xl shadow-md">
             <h3 className="text-xl font-semibold text-[#1e3a8a] mb-3">Surfactants</h3>
             <div className="flex flex-wrap gap-2">
-              <a href="/public/pdf/linear-alkyl-benzene.pdf" download className="px-3 py-1 bg-teal-500 text-white rounded-lg text-sm hover:bg-teal-600 transition">LAB</a>
-              <a href="/public/pdf/HAB-Heavy-Alkyl-Benzene.pdf" download className="px-3 py-1 bg-teal-500 text-white rounded-lg text-sm hover:bg-teal-600 transition">HAB</a>
-              <a href="/public/pdf/DO-Docyl-Benzene.pdf" download className="px-3 py-1 bg-teal-500 text-white rounded-lg text-sm hover:bg-teal-600 transition">DDB</a>
+              <a href="/pdf/linear-alkyl-benzene.pdf" download className="px-3 py-1 bg-teal-500 text-white rounded-lg text-sm hover:bg-teal-600 transition">LAB</a>
+              <a href="/pdf/HAB-Heavy-Alkyl-Benzene.pdf" download className="px-3 py-1 bg-teal-500 text-white rounded-lg text-sm hover:bg-teal-600 transition">HAB</a>
+              <a href="/pdf/DO-Docyl-Benzene.pdf" download className="px-3 py-1 bg-teal-500 text-white rounded-lg text-sm hover:bg-teal-600 transition">DDB</a>
             </div>
           </div>
 
@@ -199,8 +199,8 @@ const SolventsChemicals = () => {
           <div className="bg-gray-50 dark:bg-gray-900 p-6 rounded-2xl shadow-md">
             <h3 className="text-xl font-semibold text-[#1e3a8a] mb-3">Intermediates</h3>
             <div className="flex flex-wrap gap-2">
-              <a href="/public/pdf/Phthalic-Anhydride.pdf" download className="px-3 py-1 bg-teal-500 text-white rounded-lg text-sm hover:bg-teal-600 transition">Phthalic Anhydride</a>
-              <a href="/public/pdf/Maleic-Anhydride.pdf" download className="px-3 py-1 bg-teal-500 text-white rounded-lg text-sm hover:bg-teal-600 transition">Maleic Anhydride</a>
+              <a href="/pdf/Phthalic-Anhydride.pdf" download className="px-3 py-1 bg-teal-500 text-white rounded-lg text-sm hover:bg-teal-600 transition">Phthalic Anhydride</a>
+              <a href="/pdf/Maleic-Anhydride.pdf" download className="px-3 py-1 bg-teal-500 text-white rounded-lg text-sm hover:bg-teal-600 transition">Maleic Anhydride</a>
             </div>
           </div>
 
@@ -208,7 +208,7 @@ const SolventsChemicals = () => {
           <div className="bg-gray-50 dark:bg-gray-900 p-6 rounded-2xl shadow-md">
             <h3 className="text-xl font-semibold text-[#1e3a8a] mb-3">Polyols</h3>
             <div className="flex flex-wrap gap-2">
-              <a href="/public/pdf/TDI-Toluene-Di-Isocyanates.pdf" download className="px-3 py-1 bg-teal-500 text-white rounded-lg text-sm hover:bg-teal-600 transition">TDI 80/20</a>
+              <a href="/pdf/TDI-Toluene-Di-Isocyanates.pdf" download className="px-3 py-1 bg-teal-500 text-white rounded-lg text-sm hover:bg-teal-600 transition">TDI 80/20</a>
             </div>
           </div>
 

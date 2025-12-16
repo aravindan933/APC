@@ -7,23 +7,23 @@ const WaxesProducts = () => {
     {
       title: "Paraffin Waxes",
       desc: "Semi & Fully Refined Paraffin Wax",
-      pdf: "/public/pdf/Semi-Fully-Refined-Paraffin-Wax.pdf",
-      img: "/public/img/Semi & Fully Refined Paraffin Wax.webp", // replace with actual image
+      pdf: "/pdf/Semi-Fully-Refined-Paraffin-Wax.pdf",
+      img: "/img/Semi & Fully Refined Paraffin Wax.webp", // replace with actual image
     },
     {
       title: "Petroleum Jelly",
       desc: "Snow White Petroleum Jelly",
-      pdf: "/public/pdf/Snow-White-Petroleum-Jelly.pdf",
-      img: "/public/img/Snow White Petroleum Jelly.webp", // replace with actual image
+      pdf: "/pdf/Snow-White-Petroleum-Jelly.pdf",
+      img: "/img/Snow White Petroleum Jelly.webp", // replace with actual image
     },
     {
       title: "Liquid Paraffin",
       desc: "White Oil LLP 15 & White Oil Heavy",
       pdf: [
-        "/public/pdf/White-Oil-LLP-15.pdf",
-        "/public/pdf/White-Oil-Heavy.pdf",
+        "/pdf/White-Oil-LLP-15.pdf",
+        "/pdf/White-Oil-Heavy.pdf",
       ],
-      img: "/public/img/hite Oil LLP 15, White Oil Heavy.webp", // replace with actual image
+      img: "/img/hite Oil LLP 15, White Oil Heavy.webp", // replace with actual image
     },
   ];
 
@@ -70,7 +70,7 @@ const WaxesProducts = () => {
           {/* IMAGE */}
           <div className="flex-1 flex justify-center">
             <img
-              src="/public/img/waxes.jpg"
+              src="/img/waxes.jpg"
               alt="Waxes, Jellies & White Oils"
               className="w-[350px] h-full rounded-3xl shadow-2xl border-4 border-teal-100 dark:border-teal-700 object-cover transition-transform duration-500 hover:scale-105"
             />

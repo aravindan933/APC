@@ -5,8 +5,8 @@ import { ParallaxProvider } from "react-scroll-parallax"; // <-- import
 import MainLayout from "./components/Layout/MainLayout";
 import HomePage from "./pages/HomePage";
 import About from "./pages/About";
-import AcetatesManufacturing from "./pages/AcetatesManufacturing.jsx";
-import PetroleumDerivatives from "./pages/PetroleumDerivatives.jsx";
+import AcetatesManufacturing from "./pages/AcetatesManufacturing.jsx.jsx";
+import PetroleumDerivatives from "./pages/PetroleumDerivatives.jsx.jsx";
 import SolventsChemicals from "./pages/SolventsChemicals.jsx";
 import LubricantsManufacturing from "./pages/LubricantsManufacturing.jsx";
 import PolymersPlastics from "./pages/PolymersPlastics.jsx";
