@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link, useLocation } from "react-router-dom";
 import "@fontsource/open-sans";
+import LanguageSwitcher from "../Language/LanguageSwitcher";
 
 const BUSINESS_ITEMS = [
   "Acetates Manufacturing",
@@ -12,13 +13,25 @@ const BUSINESS_ITEMS = [
   "Bitumen, Emulsion & Cutbacks",
   "Waxes, Jellies and White Oils",
   "Plasticizers",
-  "Chemical Storage Terminal"
+  "Chemical Storage Terminal",
+  "MSDS/TDS",
+  "Technical Database"
 ];
+
+const getBusinessPath = (item) => {
+  const pathMap = {
+    "MSDS/TDS": "/msds-tds",
+    "Technical Database": "/technical-database",
+  };
+  return pathMap[item] || `/${item.toLowerCase().replace(/ & | /g, "-")}`;
+};
 
 const NAV_ITEMS = [
   { name: "Home", path: "/" },
   { name: "About Us", path: "/about" },
   { name: "Our Business", dropdown: BUSINESS_ITEMS },
+  { name: "Certificates", path: "/certificates" },
+  { name: "Virtual Tour", path: "/virtual-tour" },
   { name: "Contacts", path: "/contacts" },
 ];
 
@@ -51,7 +64,7 @@ const Navbar = () => {
       transition={{ duration: 0.5 }}
       className={`fixed w-full top-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-white/95 backdrop-blur-md shadow-lg"
+          ? "bg-white/95 dark:bg-gray-900/95 backdrop-blur-md shadow-lg"
           : "bg-transparent backdrop-blur-none shadow-none"
       }`}
       style={{ fontFamily: "Open Sans, sans-serif" }}
@@ -73,7 +86,7 @@ const Navbar = () => {
 
         {/* Desktop Menu */}
         <ul className={`hidden md:flex gap-2 items-center transition-colors duration-300 ${
-          scrolled ? "text-gray-800" : "text-white"
+          scrolled ? "text-gray-800 dark:text-gray-200" : "text-white"
         }`}>
           {NAV_ITEMS.map((item) =>
             item.dropdown ? (
@@ -125,7 +138,7 @@ const Navbar = () => {
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: -10 }}
                       transition={{ duration: 0.2 }}
-                      className="absolute top-full left-0 bg-white/95 backdrop-blur-md shadow-xl mt-2 min-w-[240px] rounded-xl overflow-hidden border border-gray-100 z-50"
+                      className="absolute top-full left-0 bg-white/95 dark:bg-gray-900/95 backdrop-blur-md shadow-xl mt-2 min-w-[240px] rounded-xl overflow-hidden border border-gray-100 dark:border-gray-700 z-50"
                     >
                       {item.dropdown.map((subItem, idx) => (
                         <motion.li
@@ -135,8 +148,8 @@ const Navbar = () => {
                           transition={{ delay: idx * 0.05 }}
                         >
                           <Link
-                            to={`/${subItem.toLowerCase().replace(/ & | /g, "-")}`}
-                            className="block py-3 px-5 text-gray-800 hover:bg-gradient-to-r hover:from-blue-600 hover:to-cyan-600 hover:text-white transition-all duration-200"
+                            to={getBusinessPath(subItem)}
+                            className="block py-3 px-5 text-gray-800 dark:text-gray-200 hover:bg-gradient-to-r hover:from-blue-600 hover:to-cyan-600 hover:text-white transition-all duration-200"
                           >
                             {subItem}
                           </Link>
@@ -166,10 +179,10 @@ const Navbar = () => {
                   <span className={`relative z-10 transition-colors duration-300 ${
                     location.pathname === item.path 
                       ? scrolled 
-                        ? 'text-blue-600 font-semibold' 
+                        ? 'text-blue-600 dark:text-blue-400 font-semibold' 
                         : 'text-blue-300 font-semibold'
                       : scrolled
-                        ? 'text-gray-800 group-hover:text-white'
+                        ? 'text-gray-800 dark:text-gray-200 group-hover:text-white'
                         : 'text-white group-hover:text-blue-300'
                   }`}>
                     {item.name}
@@ -178,14 +191,19 @@ const Navbar = () => {
               </li>
             )
           )}
+          {/* Language Switcher */}
+          <li>
+            <LanguageSwitcher />
+          </li>
         </ul>
 
         {/* Mobile Menu Button */}
-        <div className="md:hidden flex items-center">
+        <div className="md:hidden flex items-center gap-2">
+          <LanguageSwitcher />
           <motion.button
             onClick={() => setMenuOpen(!menuOpen)}
             className={`text-2xl focus:outline-none p-2 transition-colors duration-300 ${
-              scrolled ? "text-gray-800" : "text-white"
+              scrolled ? "text-gray-800 dark:text-gray-200" : "text-white"
             }`}
             whileTap={{ scale: 0.9 }}
           >
@@ -203,7 +221,7 @@ const Navbar = () => {
       <AnimatePresence>
         {menuOpen && (
           <motion.ul
-            className="md:hidden bg-white/95 backdrop-blur-md shadow-xl border-t border-gray-200"
+            className="md:hidden bg-white/95 dark:bg-gray-900/95 backdrop-blur-md shadow-xl border-t border-gray-200 dark:border-gray-700"
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
@@ -211,10 +229,10 @@ const Navbar = () => {
           >
             {NAV_ITEMS.map((item) =>
               item.dropdown ? (
-                <li key={item.name} className="border-b border-gray-200">
+                <li key={item.name} className="border-b border-gray-200 dark:border-gray-700">
                   <button
                     onClick={() => toggleMobileDropdown(item.name)}
-                    className="w-full text-left py-3 px-4 bg-gray-100 hover:bg-blue-500 hover:text-white transition"
+                    className="w-full text-left py-3 px-4 bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200 hover:bg-blue-500 hover:text-white transition"
                   >
                     {item.name} ▼
                   </button>
@@ -225,13 +243,13 @@ const Navbar = () => {
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: "auto" }}
                         exit={{ opacity: 0, height: 0 }}
-                        className="bg-white"
+                        className="bg-white dark:bg-gray-800"
                       >
                         {item.dropdown.map((subItem) => (
                           <li key={subItem}>
                             <Link
-                              to={`/${subItem.toLowerCase().replace(/ & | /g, "-")}`}
-                              className="block py-2 px-6 text-gray-800 hover:bg-blue-500 hover:text-white transition"
+                              to={getBusinessPath(subItem)}
+                              className="block py-2 px-6 text-gray-800 dark:text-gray-200 hover:bg-blue-500 hover:text-white transition"
                               onClick={() => setMenuOpen(false)}
                             >
                               {subItem}
@@ -243,10 +261,10 @@ const Navbar = () => {
                   </AnimatePresence>
                 </li>
               ) : (
-                <li key={item.name} className="border-b border-gray-200">
+                <li key={item.name} className="border-b border-gray-200 dark:border-gray-700">
                   <Link
                     to={item.path}
-                    className="block py-3 px-4 text-gray-800 hover:bg-blue-500 hover:text-white transition"
+                    className="block py-3 px-4 text-gray-800 dark:text-gray-200 hover:bg-blue-500 hover:text-white transition"
                     onClick={() => setMenuOpen(false)}
                   >
                     {item.name}

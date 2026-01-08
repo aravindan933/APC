@@ -27,15 +27,15 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-gray-900 text-gray-300 border-t border-gray-800">
+    <footer className="bg-gray-900 dark:bg-gray-950 text-gray-300 dark:text-gray-400 border-t border-gray-800 dark:border-gray-700">
       <div className="max-w-7xl mx-auto px-6 py-14">
         {/* Top Section */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           
           {/* Company Info */}
          {/* Company Info with White Background for Logo */}
-<div className="space-y-5">
-  <div className="flex items-center gap-3 bg-white p-2 rounded-lg w-max">
+          <div className="space-y-5">
+  <div className="flex items-center gap-3 bg-white dark:bg-gray-800 p-2 rounded-lg w-max">
     <img
       src="/public/img/AP_Logo.webp"
       alt="Asia Petrochemicals Logo"
@@ -45,7 +45,7 @@ const Footer = () => {
       }}
     />
   </div>
-  <p className="text-sm leading-relaxed text-gray-400">
+  <p className="text-sm leading-relaxed text-gray-400 dark:text-gray-500">
     Asia Petrochemicals LLC specializes in the manufacturing and
     distribution of petroleum and chemical-based products worldwide.
     Our commitment is to provide sustainable, high-quality industrial
@@ -58,16 +58,16 @@ const Footer = () => {
             <h3 className="text-lg font-semibold text-white mb-5 border-b border-gray-700 pb-2">
               Our Products
             </h3>
-            <ul className="space-y-2 text-gray-400 text-sm">
-              <li className="hover:text-white transition-colors">Acetates Manufacturing</li>
-              <li className="hover:text-white transition-colors">Petroleum & Derivatives</li>
-              <li className="hover:text-white transition-colors">Solvents & Chemicals</li>
-              <li className="hover:text-white transition-colors">Lubricants Manufacturing</li>
-              <li className="hover:text-white transition-colors">Polymers & Plastics</li>
-              <li className="hover:text-white transition-colors">Bitumen, Emulsion & Cutbacks</li>
-              <li className="hover:text-white transition-colors">Waxes, Jellies & White Oils</li>
-              <li className="hover:text-white transition-colors">Plasticizers</li>
-              <li className="hover:text-white transition-colors">Chemical Storage Terminal</li>
+            <ul className="space-y-2 text-gray-400 dark:text-gray-500 text-sm">
+              <li className="hover:text-white dark:hover:text-gray-200 transition-colors">Acetates Manufacturing</li>
+              <li className="hover:text-white dark:hover:text-gray-200 transition-colors">Petroleum & Derivatives</li>
+              <li className="hover:text-white dark:hover:text-gray-200 transition-colors">Solvents & Chemicals</li>
+              <li className="hover:text-white dark:hover:text-gray-200 transition-colors">Lubricants Manufacturing</li>
+              <li className="hover:text-white dark:hover:text-gray-200 transition-colors">Polymers & Plastics</li>
+              <li className="hover:text-white dark:hover:text-gray-200 transition-colors">Bitumen, Emulsion & Cutbacks</li>
+              <li className="hover:text-white dark:hover:text-gray-200 transition-colors">Waxes, Jellies & White Oils</li>
+              <li className="hover:text-white dark:hover:text-gray-200 transition-colors">Plasticizers</li>
+              <li className="hover:text-white dark:hover:text-gray-200 transition-colors">Chemical Storage Terminal</li>
             </ul>
           </div>
 
@@ -77,18 +77,18 @@ const Footer = () => {
               Contact Us
             </h3>
             <ul className="space-y-3 text-gray-400 text-sm">
-              <li className="flex items-start gap-2 hover:text-white transition-colors">
-                <FaMapMarkerAlt className="text-blue-500 mt-1" />
+              <li className="flex items-start gap-2 hover:text-white dark:hover:text-gray-200 transition-colors">
+                <FaMapMarkerAlt className="text-blue-500 dark:text-blue-400 mt-1" />
                 PO Box 76283, Ras Al Khaimah, U.A.E.
               </li>
-              <li className="flex items-center gap-2 hover:text-white transition-colors">
-                <FaPhone className="text-blue-500" /> T +971 4 2384533
+              <li className="flex items-center gap-2 hover:text-white dark:hover:text-gray-200 transition-colors">
+                <FaPhone className="text-blue-500 dark:text-blue-400" /> T +971 4 2384533
               </li>
-              <li className="flex items-center gap-2 hover:text-white transition-colors">
-                <FaFax className="text-blue-500" /> F +971 4 2384534
+              <li className="flex items-center gap-2 hover:text-white dark:hover:text-gray-200 transition-colors">
+                <FaFax className="text-blue-500 dark:text-blue-400" /> F +971 4 2384534
               </li>
-              <li className="flex items-center gap-2 hover:text-white transition-colors">
-                <FaEnvelope className="text-blue-500" />
+              <li className="flex items-center gap-2 hover:text-white dark:hover:text-gray-200 transition-colors">
+                <FaEnvelope className="text-blue-500 dark:text-blue-400" />
                 info@asia-petrochem.com
               </li>
             </ul>
@@ -103,17 +103,17 @@ const Footer = () => {
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="w-full px-4 py-2.5 bg-gray-800 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600 placeholder-gray-500"
+                className="w-full px-4 py-2.5 bg-gray-800 dark:bg-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600 placeholder-gray-500 dark:placeholder-gray-400 text-gray-200 dark:text-gray-300"
                 required
               />
               <button
                 type="submit"
-                className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2.5 rounded-md transition-all duration-300 focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 focus:ring-offset-gray-900"
+                className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2.5 rounded-md transition-all duration-300 focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 focus:ring-offset-gray-900 dark:focus:ring-offset-gray-950"
               >
                 Subscribe
               </button>
               {isSubscribed && (
-                <p className="text-green-400 text-sm animate-fade-in">
+                <p className="text-green-400 dark:text-green-500 text-sm animate-fade-in">
                   ✅ Thank you for subscribing!
                 </p>
               )}
@@ -123,7 +123,7 @@ const Footer = () => {
 
         {/* Bottom Section */}
         <div className="flex flex-col md:flex-row items-center justify-between border-t border-gray-800 pt-6 gap-4">
-          <p className="text-sm text-gray-500 text-center md:text-left">
+          <p className="text-sm text-gray-500 dark:text-gray-400 text-center md:text-left">
             © 2025. Asia Petrochemicals LLC, All rights reserved.
           </p>
 
@@ -136,10 +136,10 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={label}
-                className="p-2 rounded-full bg-gray-800 text-gray-400 hover:scale-110 transform transition-all duration-300"
+                className="p-2 rounded-full bg-gray-800 dark:bg-gray-700 text-gray-400 dark:text-gray-500 hover:scale-110 transform transition-all duration-300"
                 style={{ transition: "color 0.3s ease" }}
                 onMouseEnter={(e) => (e.currentTarget.style.color = color)}
-                onMouseLeave={(e) => (e.currentTarget.style.color = "#9CA3AF")}
+                onMouseLeave={(e) => (e.currentTarget.style.color = window.matchMedia('(prefers-color-scheme: dark)').matches ? "#6B7280" : "#9CA3AF")}
               >
                 <Icon size={20} />
               </a>

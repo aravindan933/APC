@@ -10,6 +10,7 @@ import WhatsAppButton from "../components/WhatsAppButton/WhatsAppButton";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, EffectFade, Navigation } from "swiper/modules";
 import LightRays from "../components/LightRays/LightRays";
+import { FaFacebook, FaTwitter, FaLinkedin, FaYoutube, FaInstagram, FaEnvelope } from "react-icons/fa";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/effect-fade";
@@ -223,8 +224,78 @@ export default function HomePage() {
     });
   }, []);
 
+  // Social media links
+  const socialMediaLinks = [
+    { 
+      Icon: FaFacebook, 
+      label: "Facebook", 
+      bgColor: "#1877F2", 
+      url: "#",
+      iconColor: "white"
+    },
+    { 
+      Icon: FaTwitter, 
+      label: "X (Twitter)", 
+      bgColor: "#000000", 
+      url: "#",
+      iconColor: "white"
+    },
+    { 
+      Icon: FaLinkedin, 
+      label: "LinkedIn", 
+      bgColor: "#0077B5", 
+      url: "#",
+      iconColor: "white"
+    },
+    { 
+      Icon: FaYoutube, 
+      label: "YouTube", 
+      bgColor: "#FF0000", 
+      url: "#",
+      iconColor: "white"
+    },
+    { 
+      Icon: FaInstagram, 
+      label: "Instagram", 
+      bgColor: "linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%)", 
+      url: "#",
+      iconColor: "white",
+      isGradient: true
+    },
+    { 
+      Icon: FaEnvelope, 
+      label: "Email", 
+      bgColor: "#9CA3AF", 
+      url: "mailto:info@asia-petrochem.com",
+      iconColor: "white"
+    },
+  ];
+
   return (
     <div className="relative font-sans text-slate-900">
+      {/* Fixed Social Media Sidebar - Right Side */}
+      <div className="fixed right-0 top-1/2 -translate-y-1/2 z-50 hidden lg:flex flex-col gap-1.5 pr-0">
+        {socialMediaLinks.map(({ Icon, label, bgColor, url, iconColor, isGradient }, index) => (
+          <motion.a
+            key={label}
+            href={url}
+            target={url.startsWith("mailto:") ? "_self" : "_blank"}
+            rel="noopener noreferrer"
+            aria-label={label}
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: index * 0.1, duration: 0.5 }}
+            whileHover={{ scale: 1.1, x: -5 }}
+            className="w-11 h-11 flex items-center justify-center text-white rounded-l-lg shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer"
+            style={{
+              background: isGradient ? bgColor : bgColor,
+            }}
+          >
+            <Icon size={18} style={{ color: iconColor }} />
+          </motion.a>
+        ))}
+      </div>
+
       {/* MODERN HERO SECTION WITH IMAGE SLIDESHOW */}
       <section className="relative w-full min-h-[90vh] flex items-center justify-center overflow-hidden">
         {/* Image Slideshow - Full Screen */}
@@ -305,10 +376,10 @@ export default function HomePage() {
             className="mb-6"
           >
             <p className="text-lg md:text-xl lg:text-2xl font-bold text-white mb-3">
-              The Leading name in Gulf for Specialty Chemicals Distribution.
+              The Global Leading Manufacturers And Suppliers of High Performace, High Quality Chemical Products.
             </p>
             <p className="text-base md:text-lg lg:text-xl text-blue-100 max-w-4xl mx-auto leading-relaxed">
-              ASIA PETROCHEM, based in UAE is one of the fastest growing name in Manufacturing, Distribution & International Trade of Chemicals and Downstream Petrochemicals.
+              ASIA PETROCHEMICALS LLC, based in UAE is one of the fastest growing name in Manufacturing, Distribution & International Trade of Chemicals and Downstream Petrochemicals.
             </p>
           </motion.div>
 

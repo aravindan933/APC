@@ -12,7 +12,13 @@ import LubricantsManufacturing from "./pages/LubricantsManufacturing.jsx";
 import PolymersPlastics from "./pages/PolymersPlastics.jsx";
 import WaxesJelliesWhiteOils from "./pages/WaxesJelliesWhiteOils.jsx";
 import Bitumen from "./pages/Bitumen.jsx";
+import Plasticizers from "./pages/Plasticizers.jsx";
+import ChemicalStorageTerminal from "./pages/ChemicalStorageTerminal.jsx";
 import Contacts from "./pages/Contacts";
+import Certificates from "./pages/Certificates.jsx";
+import MSDSTDSViewer from "./pages/MSDSTDSViewer.jsx";
+import TechnicalDatabase from "./pages/TechnicalDatabase.jsx";
+import VirtualTour from "./pages/VirtualTour.jsx";
 import PageWrapper from "./components/PageWrapper/PageWrapper.jsx";
 
 function App() {
@@ -49,6 +55,12 @@ function App() {
                 <Route path="/polymers-plastics" element={<PolymersPlastics />} />
                 <Route path="/waxes,-jellies-and-white-oils" element={<WaxesJelliesWhiteOils />} />
                 <Route path="/bitumen,-emulsion-cutbacks" element={<Bitumen />} />
+                <Route path="/plasticizers" element={<Plasticizers />} />
+                <Route path="/chemical-storage-terminal" element={<ChemicalStorageTerminal />} />
+                <Route path="/certificates" element={<Certificates />} />
+                <Route path="/msds-tds" element={<MSDSTDSViewer />} />
+                <Route path="/technical-database" element={<TechnicalDatabase />} />
+                <Route path="/virtual-tour" element={<VirtualTour />} />
                 <Route path="/contacts" element={<Contacts />} />
               </Routes>
             </MainLayout>

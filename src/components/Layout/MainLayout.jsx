@@ -6,7 +6,7 @@ import Footer from "../Navigation/Footer";
 const MainLayout = ({ children }) => {
   return (
     <motion.div
-      className="flex flex-col min-h-screen w-full text-gray-900 dark:text-white bg-white dark:bg-black transition-colors duration-300"
+      className="flex flex-col min-h-screen w-full text-gray-900 bg-white"
       initial="initial"
       animate="animate"
       exit="exit"
