@@ -1,0 +1,76 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About Us",
+    "business": "Our Business",
+    "contacts": "Contacts",
+    "certificates": "Certificates",
+    "msds": "MSDS/TDS",
+    "technical": "Technical Database",
+    "tour": "Virtual Tour"
+  },
+  "home": {
+    "title": "Asia Petrochemicals LLC",
+    "subtitle": "Leading Producer and Distributor of Petrochemicals",
+    "aboutTitle": "About Asia Petrochemicals LLC (APC)",
+    "aboutText1": "Asia Petrochemicals LLC (APC), established in 1989, is a UAE-based industrial group with multiple manufacturing and distribution verticals. APC is a leading producer and distributor of solvents, petrochemicals, lubricants, esters, waxes and white oils for regional and global markets.",
+    "aboutText2": "APC operates one of the UAE's key Solvent Refining and Esters Manufacturing Units in Ras Al Khaimah with a production capacity of 40,000 MTPA. Our Lubricants Blending & Packaging Facility produces high-quality lubricants and greases for automotive, industrial and specialty applications, exported globally.",
+    "aboutText3": "The Group also owns a Bulk Liquid Chemical Storage Terminal in Hamriyah Free Zone Phase-1, Sharjah with a total storage capacity of 50,000 CBM. The terminal supports in-house logistics, imports and distribution and is equipped with Class 3 certified storage, dedicated ship/barge pipelines, automated ISO-tank handling and drumming/container filling facilities.",
+    "aboutText4": "APC remains committed to investment in infrastructure, product quality and sustainable operations to serve customers across the Middle East, Africa and the Indian Subcontinent."
+  },
+  "common": {
+    "loading": "Loading",
+    "readMore": "Read More",
+    "download": "Download",
+    "view": "View",
+    "search": "Search",
+    "filter": "Filter",
+    "close": "Close",
+    "submit": "Submit",
+    "cancel": "Cancel",
+    "contact": "Contact Us",
+    "learnMore": "Learn More"
+  },
+  "footer": {
+    "description": "Asia Petrochemicals LLC specializes in the manufacturing and distribution of petroleum and chemical-based products worldwide. Our commitment is to provide sustainable, high-quality industrial solutions.",
+    "products": "Our Products",
+    "contact": "Contact Us",
+    "newsletter": "Newsletter",
+    "subscribe": "Subscribe",
+    "emailPlaceholder": "Enter your email",
+    "rights": "© 2025. Asia Petrochemicals LLC, All rights reserved."
+  },
+  "certificates": {
+    "title": "Quality Certificates",
+    "subtitle": "Our certifications demonstrate our commitment to quality, safety, and environmental standards",
+    "viewCertificate": "View Certificate"
+  },
+  "msds": {
+    "title": "MSDS & TDS Documents",
+    "subtitle": "Access Material Safety Data Sheets and Technical Data Sheets for all our products",
+    "searchPlaceholder": "Search by product name, category, or industry...",
+    "filterByCategory": "Filter by Category",
+    "filterByType": "Filter by Document Type",
+    "filterByIndustry": "Filter by Industry",
+    "download": "Download",
+    "preview": "Preview",
+    "noResults": "No documents found matching your search criteria."
+  },
+  "technical": {
+    "title": "Technical Database",
+    "subtitle": "Comprehensive technical specifications and product information",
+    "productSpecs": "Product Specifications",
+    "compatibility": "Chemical Compatibility",
+    "properties": "Physical & Chemical Properties",
+    "applications": "Application Guides"
+  },
+  "tour": {
+    "title": "Virtual Facility Tour",
+    "subtitle": "Explore our manufacturing facilities and storage terminals",
+    "startTour": "Start Tour",
+    "next": "Next",
+    "previous": "Previous",
+    "exit": "Exit Tour"
+  }
+}
+

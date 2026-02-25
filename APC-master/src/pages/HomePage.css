@@ -1,0 +1,138 @@
+/* Base container for the whole screen */
+.container {
+  height: 100vh; /* Full viewport height */
+  overflow-y: auto; /* IMPORTANT: Enables vertical scrolling */
+  background-color: #121212; /* Dark background for dramatic effect */
+  position: relative; 
+}
+
+/* The fixed light bar element */
+.light-bar {
+  position: sticky; /* Keeps the light bar fixed at the top of the container while scrolling */
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 40px; 
+  width: 100%;
+  
+  /* Initial default style (overridden by inline style for the animation) */
+  background-color: white; 
+  
+  /* Adds a smooth transition to the shadow and opacity change */
+  transition: box-shadow 0.05s ease-out, opacity 0.05s ease-out; 
+  z-index: 10;
+}
+
+/* Scrollable content section */
+.content {
+  /* Padding at the top to prevent the content from being hidden behind the sticky light bar */
+  padding: 80px 20px 20px; 
+  color: #a0a0a0;
+  min-height: 200vh; /* Ensures content is tall enough to scroll */
+}
+
+.text-header {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 40px;
+}
+/* Base container for the whole screen */
+.container {
+  height: 100vh; /* Full viewport height */
+  overflow-y: auto; /* IMPORTANT: Enables vertical scrolling */
+  background-color: #121212; /* Dark background for dramatic effect */
+  position: relative; 
+}
+
+/* The fixed light bar element */
+.light-bar {
+  position: sticky; /* Keeps the light bar fixed at the top of the container while scrolling */
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 40px; 
+  width: 100%;
+  
+  /* Initial default style (overridden by inline style for the animation) */
+  background-color: white; 
+  
+  /* Adds a smooth transition to the shadow and opacity change */
+  transition: box-shadow 0.05s ease-out, opacity 0.05s ease-out; 
+  z-index: 10;
+}
+
+/* Scrollable content section */
+.content {
+  /* Padding at the top to prevent the content from being hidden behind the sticky light bar */
+  padding: 80px 20px 20px; 
+  color: #a0a0a0;
+  min-height: 200vh; /* Ensures content is tall enough to scroll */
+}
+
+.text-header {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.content-item {
+  padding: 10px 0;
+  border-bottom: 1px solid #333;
+}
+
+/* Swiper Slideshow Custom Styles */
+.hero-slideshow .swiper-button-next,
+.hero-slideshow .swiper-button-prev {
+  color: white;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.hero-slideshow .swiper-button-next:hover,
+.hero-slideshow .swiper-button-prev:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.1);
+}
+
+.hero-slideshow .swiper-button-next::after,
+.hero-slideshow .swiper-button-prev::after {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.hero-slideshow .swiper-pagination {
+  bottom: 30px !important;
+}
+
+.hero-slideshow .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background: rgba(255, 255, 255, 0.5);
+  opacity: 1;
+  transition: all 0.3s ease;
+  margin: 0 6px;
+}
+
+.hero-slideshow .swiper-pagination-bullet-active {
+  background: white;
+  width: 30px;
+  border-radius: 6px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero-slideshow .swiper-button-next,
+  .hero-slideshow .swiper-button-prev {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .hero-slideshow .swiper-button-next::after,
+  .hero-slideshow .swiper-button-prev::after {
+    font-size: 16px;
+  }
+}
